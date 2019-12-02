@@ -1,0 +1,237 @@
+%%% Important. To have correct table numberings
+\renewcommand{\thetable}{\thesection\alph{table}}
+
+\chapter[Excellence]{Excellence}
+\label{cha:excellence}
+\instructions{
+Your proposal must address a work programme topic for this call for proposals. \\
+\textit{This section of your proposal will be assessed only to the extent that it is relevant to that topic.}\\
+}
+
+\section{Objectives}
+\label{sec:objectives}
+\instructions{
+Describe the overall and specific objectives for the project1, which should be clear, measurable,
+realistic and achievable within the duration of the project. Objectives should be consistent with
+the expected exploitation and impact of the project (see section 2).
+}
+
+The European Space Agency's Gaia Mission \cite{2016A&A...595A...1G} is the most successful of ESA's space astronomy
+missions as measured by the publication rate of papers using its data in one form or another. Over 2000 papers appeared
+between April 2018 and December 2019 that use data from the second Gaia data release. Among the high profile science
+results published by European groups are the discovery of a spiral in the phase space structure of the Milky Way's disk
+(\cite{2018Natur.561..360A} indicative of a recent disturbance, most likely due to the Sagittarius dwarf galaxy), the
+first direct observational evidence of crystallization in the interiors of white dwarfs \cite{2019Natur.565..202T},
+confirming a fifty year old prediction, and the uncovering of a major event 10 billion years into the Milky Way's past
+when a collision with a dwarf galaxy took place which contributed to the build-up of the Milky Way's stellar halo and
+thick disk \cite{2018Natur.563...85H, 2018MNRAS.478..611B, 2019arXiv190904679B}. 
+
+Many more exciting results have been reported and a common theme is that the astronomy community has so far mostly
+focused (understandably) on the `low hanging fruit' in the Gaia data archive. This is manifest in the often drastic cuts
+that are done on the quality of the Gaia data in order to obtain samples of stars for which the data analysis is
+straightforward (avoiding for example the well known problems associated with the estimation of distance as the inverse
+of the parallax \cite{2018A&A...616A...9L}), and in the ignoring of the properties of the Gaia survey itself, in
+particular its completeness and source selection strategy. This means that many high-profile science cases that Gaia was
+built for cannot be realized because the selection function of the Gaia survey combined with the data cuts leads to
+unrepresentative samples from which, for example, the size scale of the structural components of the Milky Way cannot
+reliably be derived.
+
+The Gaia selection function is a highly non-trivial combination of on-board selection of sources to observed, telemetry
+losses, selections on data quality during the data processing, and selection on quality before the publication of the
+processed data in the Gaia archive \memo{(show examples in the scientific motivation section below)}. As a result the
+selection function for Gaia has only been characterized in highly simplified ways \memo{(provide literature references
+in the motivation section below)} even though it will be crucial for a full exploitation of the intrinsic science
+potential of the Gaia data, in particular also in view of the legacy value of the Gaia archive data which will remain
+the standard in fundamental astrophysical data for decades to come.
+
+The objective of this proposal is to build a detailed selection function for the Gaia data and to provide this to the
+scientific community in the form of numerical tables and source code that allow users to apply the selection function to
+their scientific analyses and thus maximize the outcome thereof. In detail the objectives are:
+
+\begin{enumerate}
+    \item Develop a detailed mathematical formulation of a survey selection function, where the goal is to keep this is
+        as general as possible even if in this project the focus is on the Gaia survey.  The formulation should account
+        for the layering of user imposed sample selections on top of the survey selection function.
+    \item Provide a detailed practical implementation of the Gaia selection function in the form of auxiliary data,
+        which will be accessible through the ESA archive, and open source tools which will be made available through
+        code hosting websites. 
+    \item Develop tools to incorporate the selection function in scientific analyses. These tools should allow for
+        combining the Gaia survey selection function with user imposed sample restrictions. The tools will be made
+        available as open source code through code hosting websites.
+    \item Apply the selection function tools to example science cases. This will serve to demonstrate the benefits of
+        carefully accounting for the selection function and at the same time provide worked examples to the community of
+        prospective users of these tools.
+\end{enumerate}
+
+\subsection{Context}
+\label{sec:context}
+
+ESA's Gaia mission \cite{2016A&A...595A...1G} represents a European breakthrough in astrophysics, a cornerstone
+mission which was launched in 2013 aimed at producing the most accurate 3D map of the Milky Way to date. The resulting
+stereoscopic census of our Galaxy represents a giant leap in astrometric accuracy (reaching the 10--20 micro-arcsecond
+regime) complemented by the only full sky homogeneous photometric survey with an angular resolution comparable to that
+of the Hubble Space Telescope, as well as the largest spectroscopic survey ever undertaken. 
+
+The primary scientific aim of the mission is to map the structure of our Galaxy and unravel its formation history and
+subsequent evolution. Current cosmological models envisage the formation of large galaxies through the merging of
+smaller structures. Deciphering the assembly history of our Galaxy requires a detailed mapping of the structure,
+dynamics, chemical composition, and age distribution of its stellar populations. Ideally one would like to `tag'
+individual stars to each of the progenitor building blocks of the Galaxy \cite{2002ARA&A..40..487F}. The Gaia mission is
+designed to provide the required fundamental data in the form of distances (through parallaxes), space velocities
+(through proper motions and radial velocities) and astrophysical characterisation (through multi-colour photometry) for
+massive numbers of stars throughout most of the Galaxy. It should be stressed however that Gaia is not simply a `Milky
+Way mission' but is truly a multi-faceted {\em astrophysics mission} which will provide exciting scientific results
+covering many topics including: fundamental stellar data across the Hertzsprung-Russell diagram, the characterisation of
+tens of millions of binary stars, unique samples of variable stars of nearly all types (including key cosmological
+distance calibrators), detection and orbital classification of thousands of extra-solar planetary systems, a
+comprehensive survey of objects ranging from huge numbers of minor bodies in our Solar System, through galaxies in the
+nearby Universe, to over a million distant quasars. Gaia will also provide a number of stringent tests of general
+relativity. Last but not least, a massive survey such as Gaia will uncover many surprises that the Universe still holds
+in store for us.
+
+\begin{itemize}
+    \item Mention data releases and successes so far.
+    \item Briefly describe DPAC and explain why is it not doing the survey selection function.
+\end{itemize}
+
+\subsection{Scientific motivation}
+\label{sec:scientific-motivation}
+
+Detailed motivation of the need for a selection, use a few example science cases to make the point.
+
+\begin{itemize}
+    \item What prominent Gaia science cases cannot (ever?) be done without a well-defined and computationally tractable
+        selection function
+        \begin{itemize}
+            \item Structural parameters of the Milky Way (disk scale length/height etc)
+            \item Dark matter sub-halo finding through gaps in streams
+            \item Binary population parameters (frequency, parameter distributions)
+            \item Exoplanet population parameters (frequency, parameter distributions)
+        \end{itemize}
+    \item What is the selection function.
+        \begin{itemize}
+            \item Needs to be clearly defined and will probably require someone to work on the detailed definition and
+                mathematical formulation (if the latter has not already been done).
+            \item How does it relate to survey completeness; do we include completeness in the definition.
+            \item Point out that multiple layers of selection may take place in any scientific investigation of Gaia or
+                other astronomy data. The formulation/definition of the selection function should allow for layers of
+                selection.
+            \item To keep the work manageable in this project we will only provide the `basic' Gaia selection function.
+                Accounting for the effect of additional user-imposed selection of data will be through tools also
+                developed in this project.
+        \end{itemize}
+\end{itemize}
+
+\section{Relation to the work programme}
+\label{sec:relation-to-work-programme}
+\instructions{
+Indicate the work programme topic to which your proposal relates, and explain how your proposal
+addresses the specific challenge and scope of that topic, as set out in the work programme.
+}
+
+This project related to the topic ``Scientific data exploitation'' (SPACE-30-SCI-2020 of the H2020 work programme). The
+key points from the work programme addressed in this project are:
+\begin{itemize}
+    \item Enhances the scientific exploitation of data from a flagship European space mission. Relies on data from an ESA
+        mission. The data from Gaia will have a legacy value for decades to come which is enormously enhanced by the
+        availability of an accurately described selection function.
+    \item Studies of the Gaia selection function must be done through comparison with other sky surveys (ground and
+        space based). This combination of data will naturally also provide insight into the selection function of the
+        other surveys.
+    \item This work will lead to data products for the ESA Gaia archive.
+    \item The work is done in international cooperation, specifically with partners from the space powers USA and
+        Australia.
+\end{itemize}
+
+\section{Concept and methodology}
+\label{sec:conceptandmethods}
+\subsection{(a) Concept}
+\label{sec:concept}
+\instructions{
+    \begin{itemize}
+        \item Describe and explain the overall concept underpinning the project. Describe the main
+            ideas, models or assumptions involved. Identify any inter-disciplinary considerations and,
+            where relevant, use of stakeholder knowledge. Where relevant, include measures taken for
+            public/societal engagement on issues related to the project. Describe the positioning of the
+            project e.g. where it is situated in the spectrum from ‘idea to application’, or from ‘lab to
+            market’. Refer to Technology Readiness Levels where relevant. (See General Annex G of the work
+            program);
+        \item Describe any national or international research and innovation activities which will be
+            linked with the project, especially where the outputs from these will feed into the project;
+    \end{itemize}
+}
+
+Develop and implement the Gaia selection through research to be conducted by four teams \memo{(co-I plus 1 or 2
+postdocs, we'll see what can be financed)} and supported with the expertise form the US/Australian partners.
+
+\subsection{(b) Methodology}
+\label{sec:methods}
+\instructions{
+    \begin{itemize}
+        \item Describe and explain the overall methodology, distinguishing, as appropriate, activities
+            indicated in the relevant section of the work programme, e.g. for research, demonstration,
+            piloting, first market replication, etc.
+    \end{itemize}
+}
+
+\memo{The tasks below will be mapped to the work packages for this proposal. The WP descriptions will provide more
+detail on the work to be done.}
+
+\begin{enumerate}
+    \item Operational definition selection/completeness function
+        \begin{itemize}
+            \item For arbitrary sky survey? More specific to Gaia?
+            \item Mathematical formulation; account for multiple layers of selection (spacecraft, data processing, user)
+            \item Handling unknown aspects of the selection function (for example information lost along with dropped
+                spacecraft telemetry)
+        \end{itemize}
+    \item Practical realization of Gaia selection function
+        \begin{itemize}
+            \item Gather the necessary information (on-board detection/selection, filtering during data processing,
+                statistics on Gaia sources, …)
+            \item Collect data from other surveys
+            \item Study spatial resolution limitations
+            \item Translate basic selection steps to effect on source astrophysical parameter distributions (stellar
+                parameters, binary parameters, population stats, …)
+            \item Define a “baseline” selection function as starting point for adding the effect of user defined
+                selection steps
+        \end{itemize}
+    \item Develop tools (code+data) to incorporate selection function in scientific analyses
+        \begin{itemize}
+            \item Layer user choices onto baseline selection function(s)
+            \item How to make this available
+            \item Documentation
+        \end{itemize}
+    \item Apply the selection function tools to selected science cases.
+\end{enumerate}
+
+\section{Ambition}
+\label{sec:ambition}
+\instructions{
+    \begin{itemize}
+        \item Describe the advance your proposal would provide beyond the state-of-the-art, and the
+            extent the proposed work is ambitious.
+        \item Describe the innovation potential (e.g. ground-breaking objectives, novel concepts and
+            approaches, new products, services or business and organisational models) which the proposal
+            represents. Where relevant, refer to products and services already available on the market.
+            Please refer to the results of any patent search carried out.
+    \end{itemize}
+}
+
+\begin{itemize}
+    \item Currently no selection function is available for Gaia catalogue, only ad-hoc implementations for specific
+        science cases.
+        \begin{itemize}
+            \item Most works in the end ignore selection function effects.
+        \end{itemize}
+    \item Readily available selection function will enhance all scientific analyses of Gaia data and lead to much better
+        reproducibility of results.
+    \item This project will result in clearer definition of selection function concept, which can be applied to other
+        surveys too.
+    \item Expertise gained in this project can be transferred to other surveys.
+\end{itemize}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "proposal-main"
+%%% End:
