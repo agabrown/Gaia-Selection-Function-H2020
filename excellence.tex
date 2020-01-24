@@ -17,12 +17,11 @@ the expected exploitation and impact of the project (see section 2).
 }
 
 The European Space Agency's Gaia Mission \cite{2016A&A...595A...1G} is the most successful of ESA's space astronomy
-missions as measured by the publication rate of papers using its data in one form or another. Over 2000 papers appeared
+missions as measured by the publication rate of papers using its data in one form or another \memo{(do we have a citation for that?)}. Over 2000 papers appeared
 between April 2018 and December 2019 that use data from the second Gaia data release. Among the high profile science
 results published by European groups are the discovery of a spiral in the phase space structure of the Milky Way's disk
 (\cite{2018Natur.561..360A} indicative of a recent disturbance, most likely due to the Sagittarius dwarf galaxy), the
-first direct observational evidence of crystallization in the interiors of white dwarfs \cite{2019Natur.565..202T},
-confirming a fifty year old prediction, and the uncovering of a major event 10 billion years into the Milky Way's past
+first direct observational evidence of crystallization in the interiors of white dwarfs \cite{2019Natur.565..202T} (confirming a fifty year old prediction), and the uncovering of a major event 10 billion years into the Milky Way's past
 when a collision with a dwarf galaxy took place which contributed to the build-up of the Milky Way's stellar halo and
 thick disk \cite{2018Natur.563...85H, 2018MNRAS.478..611B, 2019arXiv190904679B}. 
 
@@ -36,9 +35,9 @@ built for cannot be realized because the selection function of the Gaia survey c
 unrepresentative samples from which, for example, the size scale of the structural components of the Milky Way cannot
 reliably be derived.
 
-The Gaia selection function is a highly non-trivial combination of on-board selection of sources to observed, telemetry
+The Gaia selection function is a highly non-trivial combination of the on-board selection of sources, telemetry
 losses, selections on data quality during the data processing, and selection on quality before the publication of the
-processed data in the Gaia archive \memo{(show examples in the scientific motivation section below)}. As a result the
+processed data in the Gaia archive \memo{(show examples in the scientific motivation section below)}. As a result, the
 selection function for Gaia has only been characterized in highly simplified ways \memo{(provide literature references
 in the motivation section below)} even though it will be crucial for a full exploitation of the intrinsic science
 potential of the Gaia data, in particular also in view of the legacy value of the Gaia archive data which will remain
@@ -69,7 +68,7 @@ their scientific analyses and thus maximize the outcome thereof. In detail the o
 ESA's Gaia mission \cite{2016A&A...595A...1G} represents a European breakthrough in astrophysics, a cornerstone
 mission which was launched in 2013 aimed at producing the most accurate 3D map of the Milky Way to date. The resulting
 stereoscopic census of our Galaxy represents a giant leap in astrometric accuracy (reaching the 10--20 micro-arcsecond
-regime) complemented by the only full sky homogeneous photometric survey with an angular resolution comparable to that
+regime \memo{perhaps also give the relative improvement? e.g. we now know the distance to a well known star to this precision}) complemented by the only full sky homogeneous photometric survey with an angular resolution comparable to that
 of the Hubble Space Telescope, as well as the largest spectroscopic survey ever undertaken. 
 
 The primary scientific aim of the mission is to map the structure of our Galaxy and unravel its formation history and
@@ -81,7 +80,7 @@ designed to provide the required fundamental data in the form of distances (thro
 (through proper motions and radial velocities) and astrophysical characterisation (through multi-colour photometry) for
 massive numbers of stars throughout most of the Galaxy. It should be stressed however that Gaia is not simply a `Milky
 Way mission' but is truly a multi-faceted {\em astrophysics mission} which will provide exciting scientific results
-covering many topics including: fundamental stellar data across the Hertzsprung-Russell diagram, the characterisation of
+covering many topics including: fundamental stellar physics across the Hertzsprung-Russell diagram, the characterisation of
 tens of millions of binary stars, unique samples of variable stars of nearly all types (including key cosmological
 distance calibrators), detection and orbital classification of thousands of extra-solar planetary systems, a
 comprehensive survey of objects ranging from huge numbers of minor bodies in our Solar System, through galaxies in the
@@ -105,8 +104,9 @@ Detailed motivation of the need for a selection, use a few example science cases
         \begin{itemize}
             \item Structural parameters of the Milky Way (disk scale length/height etc)
             \item Dark matter sub-halo finding through gaps in streams
-            \item Binary population parameters (frequency, parameter distributions)
+            \item Binary population parameters (frequency, parameter distributions), but also stellar census (mass function of single stars)
             \item Exoplanet population parameters (frequency, parameter distributions)
+            \item Local dark matter density
         \end{itemize}
     \item What is the selection function.
         \begin{itemize}
@@ -119,6 +119,11 @@ Detailed motivation of the need for a selection, use a few example science cases
             \item To keep the work manageable in this project we will only provide the `basic' Gaia selection function.
                 Accounting for the effect of additional user-imposed selection of data will be through tools also
                 developed in this project.
+        \end{itemize}
+    \item Impact on the rest of astrophysics
+        \begin{itemize}
+            \item The Gaia catalogue is now being used to define target selection for other surveys (e.g. 4MOST). The completeness of these derivative surveys will be defined by the completeness of Gaia.
+            \item We will implement selection functions for other surveys (e.g. APOGEE, LAMOST) in the open source software that we produce, that will enable users to, for example, calculate the odds of a star having a parallax in Gaia and a radial velocity in APOGEE.
         \end{itemize}
 \end{itemize}
 
