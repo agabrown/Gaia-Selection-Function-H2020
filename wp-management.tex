@@ -10,58 +10,58 @@
   \wpstart{1} %Starting Month
   \wpend{36} %End Month
   \wptype{Activity type} %RTD, DEM, MGT, or OTHER
-  \wplead{LEID}
+  \wplead{ULEI}
 
   % Person Months per participant (required, max 7, * for leader)  
   % syntax: \personmonths{Participant number}{value}    (not wp leader)
   %     or  \personmonths{Participant short name}{value} (not wp leader)
   %         \personmonths*{Participant number}{value}    (wp leader)
   % for example:
-  \personmonths*{LEID}{12}
-  \personmonths{UoP2}{3}
-  \personmonths{UoP3}{2}
+  \personmonths*{ULEI}{12}
+  \personmonths{MPIA}{3}
+  \personmonths{INAF}{2}
   % etc.
 
   \makewptable % Work package summary table
-    
+
   % Work Package Objectives
   \begin{wpobjectives}
     This work package has the following objectives:
     \begin{enumerate}
-    \item To develop ....
-    \item To apply this ....
-    \item etc.
+      \item To develop ....
+      \item To apply this ....
+      \item etc.
     \end{enumerate}
   \end{wpobjectives}
-  
+
   % Work Package Description
   \begin{wpdescription}
     % Divide work package into multiple tasks.
     % Use \wptask command
     % syntax: \wptask{leader}{contributors}{start-m}{end-m}{title}{description}   
- 
+
     Description of work carried out in WP, broken down into tasks, and
     with role of partners list. Use the \texttt{\textbackslash wptask} command.
 
-    \wptask{UoC}{UoC}{1}{12}{Test}{
+    \wptask{ULEI}{ULEI}{1}{12}{Test}{
       \label{task:wp1test}
       Here we will test the WP Task code. 
     }
-    \wptask{UoC}{UoC}{6}{9}{Integrate}{
+    \wptask{ULEI}{All other}{6}{9}{Integrate}{
       \label{task:wp1integrate}
       In this task UZH will integrate the work done in ~\ref{task:wp1test}.
     }    
-    \wptask{UoP3}{All other}{9}{12}{Apply}{
+    \wptask{ULEI}{All other}{9}{12}{Apply}{
       Here all the WP participants will apply the results to...
     }
-    
+
     \paragraph{Role of partners}
     \begin{description}
-    \item[Participant short name] will lead Task~\ref{task:wp1integrate}.
-    \item[UoC] will..
+      \item[Participant short name] will lead Task~\ref{task:wp1integrate}.
+      \item[UoC] will..
     \end{description}
   \end{wpdescription}
-  
+
   % Work Package Deliverable
   \begin{wpdeliverables}
     % Data for the deliverables and milestones  tables
@@ -73,13 +73,13 @@
     % 
     % \wpdeliverable[date]{R}{PU}{A report on \ldots}
 
-    \wpdeliverable[6]{LEID}{R}{PU}{Data management plan}\label{dev:wp1datamanagement}
-    
-    \wpdeliverable[12]{UoP3}{R}{PU}{Report on Feasibility study for the model
-      implementation.}\label{dev:wp1implementation}
+    \wpdeliverable[6]{ULEI}{R}{PU}{Data management plan}\label{dev:wp1datamanagement}
 
-    \wpdeliverable[24]{UoP2}{R}{PU}{Prototype of model
-      implementation.}\label{dev:wp1prototype}
+    \wpdeliverable[12]{ULEI}{R}{PU}{Report on Feasibility study for the model
+    implementation.}\label{dev:wp1implementation}
+
+    \wpdeliverable[24]{ULEI}{R}{PU}{Prototype of model
+    implementation.}\label{dev:wp1prototype}
 
   \end{wpdeliverables}
 
