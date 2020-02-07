@@ -1,0 +1,25 @@
+Distribution of person months over WPs
+
+Staff
+-----
+
+       ULEI  MPG   INAF  UCAM  NYU   MONA
+WP1    8     2     2     2     1     1
+WP2    1     2     1     1     1     1
+WP3
+WP4
+WP5
+WP6
+Total
+
+Postdocs/subcontractors
+-----------------------
+
+       ULEI  MPG   INAF  UCAM  NYU   MONA
+WP1    0     0     0     0     0     0
+WP2    0     0     0     0     0     0
+WP3
+WP4
+WP5
+WP6
+Total  36    36    36    36    12    0
