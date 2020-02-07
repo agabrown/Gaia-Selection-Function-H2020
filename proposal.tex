@@ -107,6 +107,21 @@
 
 \include{journal-abbrevs}
 \newcommand\memo[1]{\textcolor{red}{\textbf{#1}}}
+% Duration of project in months. For now assumed 6 months preparation (hiring etc) and 36 months actual work.
+\newcommand\duration{42}
+\newcommand\acro{CoG}
+\newcommand\equref[1]{equation (\ref{#1})} 
+\newcommand\equrefcap[1]{Equation (\ref{#1})} 
+\newcommand\figref[1]{figure \ref{#1}}
+\newcommand\figrefs[1]{figures \ref{#1}}
+\newcommand\figrefcap[1]{Figure \ref{#1}}
+\newcommand\figrefscap[1]{Figures \ref{#1}}
+\newcommand\tabref[1]{table \ref{#1}}
+\newcommand\tabrefcap[1]{Table \ref{#1}}
+\newcommand\secref[1]{section \ref{#1}}
+\newcommand\secrefcap[1]{Section \ref{#1}}
+\newcommand\apref[1]{appendix \ref{#1}}
+\newcommand\aprefcap[1]{Appendix \ref{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -114,7 +129,7 @@
 %% IMPORTANT store proposal information in global variables
 %% ========================================================
 \title{Completeness of the Gaia-verse\\ \memo{(working title and acronym: other suggestions welcome)}}
-\shortname{CoG} 
+\shortname{\acro} 
 \titlelogo{}{0.25} % file name and scale
 \fundingscheme{Research and Innovation Action}
 \topic{SPACE-30-SCI-2020: Scientific data exploitation}

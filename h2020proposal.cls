@@ -800,7 +800,7 @@
   \newwrite\delivlistfile
   \immediate\openout\delivlistfile=\jobname.ldl
   \immediate\write\delivlistfile{%
-    \noexpand\begin{longtable}{|p{3.5em}|p{15em}|p{3em}|p{4.5em}|p{3em}|p{3em}|p{5em}|}
+    \noexpand\begin{longtable}{|p{3.5em}|p{13em}|p{3em}|p{4.5em}|p{5em}|p{3em}|p{5em}|}
     }%
     \immediate\write\delivlistfile{
       \noexpand\caption{Deliverable list}

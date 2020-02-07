@@ -8,8 +8,8 @@
   %%%%%%%%%%%%%%%%%% TOP TABLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Data for the top table
   \wpstart{1} %Starting Month
-  \wpend{42} %End Month
-  \wptype{Activity type} %RTD, DEM, MGT, or OTHER
+  \wpend{\duration} %End Month
+  \wptype{MGT} %RTD, DEM, MGT, or OTHER
   \wplead{ULEI}
 
   % Person Months per participant (required, max 7, * for leader)  
@@ -27,7 +27,7 @@
 
   % Work Package Objectives
   \begin{wpobjectives}
-    This package provides the overall scientific coordination and administrative management of CoG, as described in Sect.~\ref{sec:management}.
+    This package provides the overall scientific coordination and administrative management of CoG, as described in \secref{sec:management}.
   \end{wpobjectives}
 
   % Work Package Description
@@ -40,29 +40,17 @@
     well as the global administrative and coordination tasks inside the consortium, including financial
     management, intellectual property management and project documentation. It also includes the
     coordination with institutions and bodies relevant for the development of the Gaia archive like
-    ESA, DPAC and MW-Gaia, as well as the representation of CoG in meetings or committees
+    ESA, DPAC and MW-Gaia, as well as the representation of {\acro} in meetings or committees
     related to this coordination.
-    
-    Description of work carried out in WP, broken down into tasks, and
-    with role of partners list. Use the \texttt{\textbackslash wptask} command.
 
-    \wptask{ULEI}{ULEI}{1}{42}{Test}{
+    \wptask{ULEI}{ULEI}{1}{\duration}{Overall coordination}{
       \label{task:wp1coordinator}
-      Here we will test the WP Task code. 
+      Overall coordination and administrative management as described above (12 person-months). 
     }
-    \wptask{ULEI}{All other}{6}{9}{Integrate}{
-      \label{task:wp1integrate}
-      In this task UZH will integrate the work done in ~\ref{task:wp1test}.
+    \wptask{ULEI}{MPG, INAF, UCAM}{1}{\duration}{Scientific coordination}{
+      \label{task:wp1others}
+      Scientific coordination by the four main partners through the {\acro} Executive Board. As stated in \secref{sec:management}, the partners NYU and MONA will have a standing invitation to meetings of the Executive Board in order to keep communications efficient.
     }    
-    \wptask{ULEI}{All other}{9}{12}{Apply}{
-      Here all the WP participants will apply the results to...
-    }
-
-    \paragraph{Role of partners}
-    \begin{description}
-      \item[Participant short name] will lead Task~\ref{task:wp1integrate}.
-      \item[UoC] will..
-    \end{description}
   \end{wpdescription}
 
   % Work Package Deliverable
@@ -76,14 +64,18 @@
     % 
     % \wpdeliverable[date]{R}{PU}{A report on \ldots}
 
+    \wpdeliverable[1]{ULEI}{OTHER}{PU}{Kick-off meeting (plenary)}\label{dev:wp1kickoff}
+    \wpdeliverable[2]{ULEI}{R}{PU}{Consortium agreement}\label{dev:wp1consortium_agreement}
     \wpdeliverable[6]{ULEI}{R}{PU}{Data management plan}\label{dev:wp1datamanagement}
-
-    \wpdeliverable[12]{ULEI}{R}{PU}{Report on Feasibility study for the model
-    implementation.}\label{dev:wp1implementation}
-
-    \wpdeliverable[24]{ULEI}{R}{PU}{Prototype of model
-    implementation.}\label{dev:wp1prototype}
-
+    \wpdeliverable[6]{ULEI}{R}{PU}{Semestral report 1}\label{dev:wp1sem1}
+    \wpdeliverable[12]{ULEI}{R}{PU}{Semestral report 2}\label{dev:wp1sem2}
+    \wpdeliverable[18]{ULEI}{R}{PU}{Semestral report 3}\label{dev:wp1sem3}
+    \wpdeliverable[21]{ULEI}{OTHER}{PU}{Mid-term meeting (plenary)}\label{dev:wp1midtterm}
+    \wpdeliverable[24]{ULEI}{R}{PU}{Semestral report 4}\label{dev:wp1sem4}
+    \wpdeliverable[30]{ULEI}{R}{PU}{Semestral report 5}\label{dev:wp1sem5}
+    \wpdeliverable[36]{ULEI}{R}{PU}{Semestral report 6}\label{dev:wp1sem6}
+    \wpdeliverable[41]{ULEI}{OTHER}{PU}{Closing meeting (plenary)}\label{dev:wp1closing}
+    \wpdeliverable[\duration]{ULEI}{R}{PU}{Final report to the EC}\label{dev:wp1finalreport}
   \end{wpdeliverables}
 
 \end{workpackage}
