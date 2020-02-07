@@ -15,9 +15,13 @@
 
   % Work Package Objectives
   \begin{wpobjectives}
-    This objective of this work package is to research and implement a precise mathematical formulation of the concept of a survey selection function. The results will be written up as a scientific paper (to be published in the peer-reviewed literature) that will guide the rest of the work to be done within {\acro}.  The definition of the selection function will account for the following aspects:
+    This objective of this work package is to research and implement a precise mathematical formulation of the concept of a survey selection function. The results will be written up as a scientific paper (to be published in the peer-reviewed literature) that will guide the rest of the work to be done within {\acro}.  The mathematical formulation of the selection function will account for the following aspects:
     \begin{itemize}
-        \item 
+        \item Applicability to arbitrary astronomical sky surveys.
+        \item The combined selection function of multiple surveys can be described within the same formalism.
+        \item Accommodate multiple selection layers (e.g., the selection function intrinsic to a survey combined with additional selections imposed by the user of the data).
+        \item Unknowable aspects of the selection function should be accounted for (e.g., it is not guaranteed that all sources of data loss along the detection-telemetry-processing chain for Gaia can be traced). \memo{Formulate this more precisely and in a way that makes clear this aspect can be addressed.}
+        \item ...
     \end{itemize}
   \end{wpobjectives}
 
@@ -30,38 +34,26 @@
     Description of work carried out in WP, broken down into tasks, and
     with role of partners list. Use the \texttt{\textbackslash wptask} command.
 
-    \wptask{UCAM}{UCAM}{1}{12}{Test}{
-      \label{task:wp2test}
-      Here we will test the WP Task code. 
+    \wptask{MPG}{MPG}{1}{12}{Scientific coordination}{
+      \label{task:wp2coordination}
+      Scientific coordination of the work on defining the selection function and coordination of writing the paper corresponding to deliverable \ref{dev:wp2document}.
     }
-    \wptask{ULEI}{All other}{6}{9}{Integrate}{
-      \label{task:wp2integrate}
-      In this task UZH will integrate the work done in ~\ref{task:wp2test}.
-    }    
-    \wptask{ULEI}{All other}{9}{12}{Apply}{
-      Here all the WP participants will apply the results to...
+    \wptask{MPG}{All other}{1}{12}{}{
+      \label{task:wp2rtd}
+      Research and implement the mathematical formulation of survey selection functions.
     }
 
     \paragraph{Role of partners}
     \begin{description}
-      \item[Participant short name] will lead Task~\ref{task:wp2integrate}.
-      \item[UoC] will..
+      \item[MPG] will lead Task~\ref{task:wp2coordination}.
+      \item[ULEI, INAF, UCAM, NYU, MONA] will contribute to the research and implementation of the survey selection function mathematical formulation and will contribute to writing the paper corresponding to deliverable \ref{dev:wp2document}.
     \end{description}
   \end{wpdescription}
 
   % Work Package Deliverable
   \begin{wpdeliverables}
     % \wpdeliverable[date]{R}{PU}{A report on \ldots}
-
-    \wpdeliverable[36]{UCAM}{R}{PU}{Report on the definition of the model
-    specifications.}\label{dev:wp2specs}
-
-    \wpdeliverable[12]{ULEI}{R}{PU}{Report on Feasibility study for the model
-    implementation.}\label{dev:wp2implementation}
-
-    \wpdeliverable[24]{ULEI}{R}{PU}{Prototype of model
-    implementation.}\label{dev:wp2prototype}
-
+    \wpdeliverable[12]{MPG}{R}{PU}{Document on the mathematical formulation of survey selection functions (to be submitted to peer-reviewed journal).}\label{dev:wp2document}
   \end{wpdeliverables}
 
 \end{workpackage}
