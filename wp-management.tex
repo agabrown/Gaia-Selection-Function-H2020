@@ -8,7 +8,7 @@
   %%%%%%%%%%%%%%%%%% TOP TABLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Data for the top table
   \wpstart{1} %Starting Month
-  \wpend{36} %End Month
+  \wpend{42} %End Month
   \wptype{Activity type} %RTD, DEM, MGT, or OTHER
   \wplead{ULEI}
 
@@ -17,21 +17,17 @@
   %     or  \personmonths{Participant short name}{value} (not wp leader)
   %         \personmonths*{Participant number}{value}    (wp leader)
   % for example:
-  \personmonths*{ULEI}{12}
-  \personmonths{MPIA}{3}
+  \personmonths*{ULEI}{8}
+  \personmonths{MPG}{2}
   \personmonths{INAF}{2}
+  \personmonths{UCAM}{2}
   % etc.
 
   \makewptable % Work package summary table
 
   % Work Package Objectives
   \begin{wpobjectives}
-    This work package has the following objectives:
-    \begin{enumerate}
-      \item To develop ....
-      \item To apply this ....
-      \item etc.
-    \end{enumerate}
+    This package provides the overall scientific coordination and administrative management of CoG, as described in Sect.~\ref{sec:management}.
   \end{wpobjectives}
 
   % Work Package Description
@@ -40,11 +36,18 @@
     % Use \wptask command
     % syntax: \wptask{leader}{contributors}{start-m}{end-m}{title}{description}   
 
+    This work package includes the administrative tasks to fulfil the EC requirements and rules as
+    well as the global administrative and coordination tasks inside the consortium, including financial
+    management, intellectual property management and project documentation. It also includes the
+    coordination with institutions and bodies relevant for the development of the Gaia archive like
+    ESA, DPAC and MW-Gaia, as well as the representation of CoG in meetings or committees
+    related to this coordination.
+    
     Description of work carried out in WP, broken down into tasks, and
     with role of partners list. Use the \texttt{\textbackslash wptask} command.
 
-    \wptask{ULEI}{ULEI}{1}{12}{Test}{
-      \label{task:wp1test}
+    \wptask{ULEI}{ULEI}{1}{42}{Test}{
+      \label{task:wp1coordinator}
       Here we will test the WP Task code. 
     }
     \wptask{ULEI}{All other}{6}{9}{Integrate}{
