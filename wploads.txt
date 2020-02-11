@@ -1,15 +1,27 @@
 Distribution of person months over WPs
 
+WP summaries
+------------
+
+WPn Summary, Lead
+
+WP1 Coordination/management, ULEI
+WP2 Define selection function (do this ahead of appointment of postdocs), MPG
+WP3 Research the selection function, UCAM
+WP4 Practical implementation and dissemination, ULEI
+WP5 Combined selection functions, MPG
+WP6 Science applications (1 paper at least per postdoc), INAF
+
 Staff
 -----
 
        ULEI  MPG   INAF  UCAM  NYU   MONA
 WP1    8     2     2     2     1     1
 WP2    1     2     1     1     1     1
-WP3
-WP4
-WP5
-WP6
+WP3    0     0     0     3     ?     ?
+WP4    3     0     0     0     ?     ?
+WP5    0     3     0     0     ?     ?
+WP6    1     1     3     1     ?     ?
 Total
 
 Postdocs/subcontractors
@@ -18,8 +30,8 @@ Postdocs/subcontractors
        ULEI  MPG   INAF  UCAM  NYU   MONA
 WP1    0     0     0     0     0     0
 WP2    0     0     0     0     0     0
-WP3
-WP4
-WP5
-WP6
-Total  36    36    36    36    12    0
+WP3    2     6     10    20    ?     ?
+WP4    20    6     2     2     ?     ?
+WP5    2     12    12    2     ?     ?
+WP6    12    12    12    12    ?     ?
+Total  36    36    36    36    12    ?
