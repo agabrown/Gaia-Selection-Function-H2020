@@ -1,0 +1,62 @@
+\begin{workpackage}{Definition selection function}
+  \label{wp:selfuncombine}
+  \wpstart{7} %Starting Month
+  \wpend{\duration} %End Month
+  \wptype{RTD} %RTD, DEM, MGT, or OTHER
+  \wplead{MPG}
+  \personmonths{ULEI}{2}
+  \personmonths*{MPG}{12}
+  \personmonths{INAF}{12}
+  \personmonths{UCAM}{2}
+  \personmonths{NYU}{0}
+  \personmonths{MONA}{0}
+
+  \makewptable % Work package summary table
+
+  % Work Package Objectives
+  \begin{wpobjectives}
+    The objective of this work package is to research and develop methods to derive selection functions for the combination of Gaia and other large sky surveys. A concrete implementation for a few cases will be implemented in work package \ref{wp:selfunimplementation}. The detailed objectives are
+    \begin{enumerate}
+      \item Research and develop a generic method for constructing selection functions for combinations of surveys.
+      \item Apply this method to a few concrete cases of the combination of Gaia with another survey.
+    \end{enumerate}
+  \end{wpobjectives}
+
+  % Work Package Description
+  \begin{wpdescription}
+    % Divide work package into multiple tasks.
+    % Use \wptask command
+    % syntax: \wptask{leader}{contributors}{start-m}{end-m}{title}{description}   
+    \wptask{MPG}{All other}{7}{\duration}{Scientific coordination.}{
+      \label{task:wp5coordination}
+      Scientific coordination of the research and development of the combined selection function and coordination of writing the paper corresponding to deliverable \ref{dev:wp5finalreport}.
+    }
+    \wptask{MPG}{All other}{7}{\duration}{Generic combination method.}{
+      \label{task:wp5method}
+      Research and develop a generic method for constructing selection functions for combinations of surveys.
+    }
+    \wptask{MPG}{All other}{7}{\duration}{Example combined selection functions.}{
+      \label{task:wp5examples}
+      For a few selected examples construct the selection function for the combination of Gaia and another survey, using the method developed in task~\ref{task:wp5method}.
+    }    
+
+    \paragraph{Role of partners}
+    \begin{description}
+      \item[MPG] will lead Tasks~\ref{task:wp5coordination}, \ref{task:wp5method}, and \ref{task:wp5examples}.
+      \item[All other partners] will contribute to tasks \ref{task:wp5method} and \ref{task:wp5examples}.
+    \end{description}
+  \end{wpdescription}
+
+  % Work Package Deliverable
+  \begin{wpdeliverables}
+    % \wpdeliverable[date]{R}{PU}{A report on \ldots}
+    \wpdeliverable[\duration]{MPG}{R}{PU}{Report documenting the methods to construct combined selection functions (also to be submitted to peer-reviewed journal).}\label{dev:wp5finalreport}
+  \end{wpdeliverables}
+
+\end{workpackage}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "proposal-main"
+%%% End:

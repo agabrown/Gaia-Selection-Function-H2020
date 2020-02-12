@@ -1,6 +1,6 @@
 \begin{workpackage}{Research and define the Gaia selection function}
   \label{wp:selfungaia}
-  \wpstart{6} %Starting Month
+  \wpstart{7} %Starting Month
   \wpend{\duration} %End Month
   \wptype{RTD} %RTD, DEM, MGT, or OTHER
   \wplead{UCAM}
@@ -29,41 +29,38 @@
     % Use \wptask command
     % syntax: \wptask{leader}{contributors}{start-m}{end-m}{title}{description}   
 
-    Description of work carried out in WP, broken down into tasks, and
-    with role of partners list. Use the \texttt{\textbackslash wptask} command.
-
-    \wptask{UCAM}{UCAM}{1}{12}{Test}{
-      \label{task:wp3test}
-      Here we will test the WP Task code. 
+    \wptask{UCAM}{UCAM}{7}{\duration}{Scientific coordination}{
+      \label{task:wp3coordination}
+       Scientific coordination of the research and development of the selection function and coordination of writing the paper corresponding to deliverable \ref{dev:wp3GSFfinal}.
     }
-    \wptask{ULEI}{All other}{6}{9}{Integrate}{
-      \label{task:wp3integrate}
-      In this task UZH will integrate the work done in ~\ref{task:wp3test}.
+    \wptask{UCAM}{All other}{7}{\duration}{R\&D top level selection functions}{
+      \label{task:wp3toplevelGSF}
+      Research and development of the top-level Gaia selection function which will describe the probability that a source enters the Gaia astrometric, photometric or radial velocity surveys, and combinations thereof.
     }    
-    \wptask{ULEI}{All other}{9}{12}{Apply}{
-      Here all the WP participants will apply the results to...
+    \wptask{MPG}{All other}{7}{\duration}{R\&D spectroscopic selection functions}{
+      \label{task:wp3spectroscopicGSF}
+      Research and development of the Gaia spectroscopic selection function. This refers to the probability that a BP/RP and/or and RVS spectrum was measured for a source in the Gaia survey.
+    }
+    \wptask{INAF}{All other}{7}{\duration}{R\&D specialized selection functions}{
+      \label{task:wp3specializedGSF}
+      Research and develop the methods needed to create selection functions for specific subsets of the Gaia survey, such as binary stars or extragalactic objects. Apply this to example cases.
     }
 
     \paragraph{Role of partners}
     \begin{description}
-      \item[Participant short name] will lead Task~\ref{task:wp3integrate}.
-      \item[UoC] will..
+      \item[UCAM] will lead Tasks~\ref{task:wp3coordination} and \ref{task:wp3toplevelGSF}.
+      \item[MPG] will lead Task~\ref{task:wp3toplevelGSF}.
+      \item[INAF] will lead Task~\ref{task:wp3specializedGSF}
+      \item[All partners] will contribute to the research and development of the Gaia selection functions. 
     \end{description}
   \end{wpdescription}
 
   % Work Package Deliverable
   \begin{wpdeliverables}
     % \wpdeliverable[date]{R}{PU}{A report on \ldots}
-
-    \wpdeliverable[36]{UCAM}{R}{PU}{Report on the definition of the model
-    specifications.}\label{dev:wp2specs}
-
-    \wpdeliverable[12]{ULEI}{R}{PU}{Report on Feasibility study for the model
-    implementation.}\label{dev:wp2implementation}
-
-    \wpdeliverable[24]{ULEI}{R}{PU}{Prototype of model
-    implementation.}\label{dev:wp2prototype}
-
+    \wpdeliverable[12]{UCAM}{R}{PU}{Documentation of preliminary top level Gaia selection functions.}\label{dev:wp3version1selfun}
+    \wpdeliverable[36]{UCAM}{R}{PU}{Documentation of the Gaia selections functions (also to be submitted to as papers to a peer-reviewed journal)}\label{dev:wp3GSFfinal}
+    \memo{Add further deliverables? Such as intermediate reports for each of the tasks above?}
   \end{wpdeliverables}
 
 \end{workpackage}
