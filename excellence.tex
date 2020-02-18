@@ -102,14 +102,7 @@ The Gaia sky survey strategy is derived from that of the Hipparcos mission and a
 
 The processing of the observations collected by Gaia is carried out by the DPAC through a series of complex pipelines which are part of a large iterative system\citep[see section 7 in][]{2016A&A...595A...1G}.
 
-\begin{figure}[t]
-    \centering
-    \includegraphics{img/pgm_ideal_gsf.pdf}
-    \caption{Caption}
-    \label{fig:my_label}
-\end{figure}
-
-Although the Gaia survey selection function is seemingly very simple, with only a magnitude limit imposed on the observations (see \figref{fig:gsf_ideal}), each of the above components of the Gaia mission adds complexity to the survey selection function. A few examples are listed here:
+Although the Gaia survey selection function is seemingly very simple, with only a magnitude limit imposed on the observations (see \figref{fig:gsf_ideal}), each of the above components of the Gaia mission adds complexity to the survey selection function as illustrated in \figref{fig:gsf_realistic}. A few examples are listed here:
 \begin{itemize}
     \item The data collection on the spacecraft is limited by the amount of sources that can be handled at any on time, meaning that for dense regions on the sky (above $10^6$, $750\,000$, and $35\,000$ sources~deg$^{-2}$ for the astrometric, photometric, and spectroscopic instruments respectively) not all sources can be measured leading brighter effective survey limits in those regions. In addition the on-board storage capacity limitations combined with available ground station time lead to deletion of data on occasions when both Gaia telescopes are scanning along the Galactic plane for prolonged periods of time.
     \item Despite the optimal sky survey strategy realized through the revolving scanning technique, the number of times any given source is observed does vary with celestial position, in particular with the ecliptic latitude.
@@ -212,6 +205,13 @@ The stakeholders in this effort are the astronomical scientific community, which
 
 The links to ESA and DPAC are a natural element in this proposal because of the role of the coordinator and the contact persons at the European partners within the DPAC consortium. The links to the scientific community are established through the academic institutes where the work will take place and through participation in international workshops and conferences. Further links exist with the MW-Gaia COST action in which several of the partners on this proposal participate. This will facilitate participation in workshop and conferences organized by MW-Gaia and focused on Gaia science which are natural venues for the dissemination of the knowledge and tools built up with CoG.
 
+\begin{figure}[t]
+    \centering
+    \includegraphics[height=8cm]{pgm_ideal_gsf.pdf}
+    \caption{Idealized Gaia selection function. Here it is assumed that the S/C exactly follows the scan law as commanded from ground without any interruptions. The on-board decision on whether or not a source is observed is dependent only on the $G$ and $G_\mathrm{RVS}$ magnitudes of the source and the corresponding fixed survey limits. See text for a more detailed explanation.}
+    \label{fig:gsf_ideal}
+\end{figure}
+
 \subsection{(b) Methodology}
 \label{sec:methods}
 \instructions{
@@ -252,6 +252,13 @@ detail on the work to be done.}
         \end{itemize}
     \item Apply the selection function tools to selected science cases.
 \end{enumerate}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{pgm_realistic_gsf.pdf}
+    \caption{Simplified diagram of the actual Gaia selection function. The left hand side of the diagram provides a fairly complete picture of all the ingredients on-board the spacecraft that contribute to the selection function before the raw data is in hand on the ground. The right hand side shows in strongly simplified form how the Gaia selection function is further affected by the decision taken along the steps from the initial treatment of the raw data to the final published Gaia catalogue. See text for more detailed explanations.}
+    \label{fig:gsf_realistic}
+\end{figure}
 
 \section{Ambition}
 \label{sec:ambition}
