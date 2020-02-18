@@ -10,7 +10,7 @@ rc("text", usetex=False)
 
 import daft
 
-pgm = daft.PGM([5,5], origin=[0, 0], node_unit=1.5, grid_unit=2.5)
+pgm = daft.PGM([4.5,4.5], origin=[0.25, 0.5], node_unit=1.5, grid_unit=2.5)
 
 pgm.add_node(daft.Node("Gsource", "$G_\mathrm{source}$", 3, 4.5))
 pgm.add_node(daft.Node("afxpobs", "AF/XP\nobservations", 3, 3.5, aspect=2.25))

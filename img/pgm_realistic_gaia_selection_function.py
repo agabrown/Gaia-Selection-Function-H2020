@@ -11,7 +11,7 @@ rc("text", usetex=False)
 
 import daft
 
-pgm = daft.PGM([13,9], origin=[-1, 1], node_unit=1.5, grid_unit=2.5)
+pgm = daft.PGM([12.75,7.5], origin=[-1, 2], node_unit=1.5, grid_unit=2.5)
 
 pgm.add_node(daft.Node("Gsource", "$G_\mathrm{source}$", 0, 8))
 pgm.add_node(daft.Node("detection", "detection", 3, 8, aspect=2.25))
