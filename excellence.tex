@@ -224,6 +224,15 @@ The links to ESA and DPAC are a natural element in this proposal because of the 
 
 The Gaia selection function in an ideal world would look like the probabilistic graphical model shown in \figref{fig:gsf_ideal}. In this figure and the subsequent text the three main Gaia instruments as referred to as `AF' for Astrometric Field (collecting the astrometric data), `XP' which is short for the BP or RP photometric instruments, and RVS, the radial velocity spectrometer. The model in \figref{fig:gsf_ideal} shows that AF and XP observations of sources are collected whenever one of the Gaia telescopes scans over a source which has a magnitude $G_\mathrm{source}$ brighter than the magnitude limit $G_\mathrm{lim}$. If a source is bright enough in $G_\mathrm{RVS}$ data are also collected by the RVS instrument. The pointing of the Gaia telescopes is determined by a `scan law' which is fixed for the mission duration. The probability of a source entering the Gaia catalogue would thus be determined only by its apparent magnitude $G$, the number of times the Gaia telescopes scanned across the source, and the uncertainty $\sigma_G$ in the on-board estimate of $G$. The probability that a radial velocity is listed in addition to astrometry and photometry would be determined independently by the apparent magnitude of the source in the RVS wavelength range, $G_\mathrm{RVS}$, in combination with the scan law and the uncertainty $\sigma_{G_\mathrm{RVS}}$ of the on-board estimate of $G_\mathrm{RVS}$. The selection function for any derived data products, such as the astrophysical parameters of the sources, would be driven entirely by the basic data (astrometry, photometry, radial velocity, XP spectra, RVS spectra, or any combination thereof) used as inputs.
 
+In reality the Gaia survey selection function is vastly more complicated owing to the many stages in between source detection and final data product at which decision are made on whether or not to make a certain observation or include it in the data processing. This is illustrated in \figref{fig:gsf_realistic}. The left hand side of the diagram shows how many decision are taken on-board the spacecraft that affect whether or not for a given source passing through the field of view of one of the telecopes measurement are actually collected. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{pgm_realistic_gsf.pdf}
+    \caption{Simplified diagram of the actual Gaia selection function. The left hand side of the diagram provides a fairly complete picture of all the ingredients on-board the spacecraft that contribute to the selection function before the raw data is in hand on the ground. The right hand side shows in strongly simplified form how the Gaia selection function is further affected by the decision taken along the steps from the initial treatment of the raw data to the final published Gaia catalogue. See text for more detailed explanations.}
+    \label{fig:gsf_realistic}
+\end{figure}
+
 \memo{The tasks below will be mapped to the work packages for this proposal. The WP descriptions will provide more
 detail on the work to be done.}
 
@@ -254,13 +263,6 @@ detail on the work to be done.}
         \end{itemize}
     \item Apply the selection function tools to selected science cases.
 \end{enumerate}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{pgm_realistic_gsf.pdf}
-    \caption{Simplified diagram of the actual Gaia selection function. The left hand side of the diagram provides a fairly complete picture of all the ingredients on-board the spacecraft that contribute to the selection function before the raw data is in hand on the ground. The right hand side shows in strongly simplified form how the Gaia selection function is further affected by the decision taken along the steps from the initial treatment of the raw data to the final published Gaia catalogue. See text for more detailed explanations.}
-    \label{fig:gsf_realistic}
-\end{figure}
 
 \section{Ambition}
 \label{sec:ambition}
