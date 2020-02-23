@@ -15,19 +15,21 @@
 \end{itemize}
 }
 
+We expect the following impacts directly related to the work programme:
 \begin{itemize}
-    \item Expertise gained in this project can be applied to other/future large surveys and space missions.
-    \item Data and tools for incorporating selection function in your science.
+    \item The availability of a detailed Gaia selection function coupled with the data and tools to use it will enhance the quality and reproducibility the scientific exploitation of data from this flagship European space mission. Thus great value is added to the existing European efforts dedicated to the data processing for the Gaia mission as well as to the efforts to produce the publicly available Gaia data releases.
+    \item A readily available Gaia selection function will enable addressing science cases that are currently hampered by the lack of a detailed description of Gaia survey selection biases. This will translate in an increase in the number of scientific publications based on European space missions.
+    \item We will make data products and tool available for a much more advanced analysis of Gaia and other survey data than is currently possible.
+    \item Although the participants on this proposal have all worked together in various constellations in the past on different topics, this is the first time that this group of experts willing to invest time in the details of the Gaia selection function will work closely together, this enhancing an existing loose collaboration and broadening the expertise of all involved.
+    \item The expertise gained in this project can be transferred to other surveys. This is already party planned in this proposal through work package \ref{wp:selfuncombine} on combined selection functions. However we expect that beyond that other survey teams will seek out the expertise developed in this project pick up the method and tools we make available. This will enhance both European and international activities. Examples of future European projects that stand to benefit are the 4MOST and WEAVE spectroscopic surveys and the Euclid and Plato space missions. Examples of international projects that would benefit are future surveys such as LSST (US) as well as existing surveys such as GALAH (Australia) which rely heavily on complementary Gaia data.
 \end{itemize}
+
+On a broader societal level the impact will be through the expertise built up with understanding in detail how the interpretation of large amounts of collected data is affected by selection biases and how this limitation can be addressed through a proper description of the way the data was collected. This will be of benefit to any data science application and we expect that some of the researchers funded through this proposal might opt for a future career in European companies of which the business contains a large data science component.
+
+Other than the normal risks associated with scientific research we do not foresee any barriers to achieving the impacts above. The project does of course have some risk factors as listed in \secref{sec:management}.
 
 \section{Measures to maximize impact} 
 \label{sec:maximize-impact}
-
-\begin{itemize}
-    \item Publication of results, including science applications.
-    \item Data availability through ESA archives, code through code hosting sites.
-    \item Organize workshops to demo the selection function and help astronomers with their concrete problems.
-\end{itemize}
 
 \subsection{a) Dissemination and exploitation of results}
 \label{sec:dissemination-exploitation}
@@ -48,18 +50,24 @@
 \end{itemize}
 }
 
+\subsubsection{Draft plan for the dissemination and exploitation of the project's results}
+
+The area in which we expect to make the largest impact is the scientific exploitation of results from the Gaia mission and other surveys. Correspondingly our dissemination efforts will be aimed at scientists using astronomical survey data and we will primarily use the standard academic channels:
 \begin{itemize}
-    \item Open source policy for the code/tools
-        \begin{itemize}
-            \item Host on e.g. Zenodo, Github, \ldots
-            \item \memo{note: hosting at ESA implies one has to be extremely careful and consistent with the
-                licenses, which for academic code will quickly become a major hassle}
-        \end{itemize}
-    \item Open access for all data and code produced in this project
-        \begin{itemize}
-            \item Host these in Gaia archive if possible
-        \end{itemize}
+    \item Presentation, description and documentation of our results through scientific publications in peer-reviewed journals. We will make use of open access journals (`gold' open access) and we will always make our publications available through \url{https://arxiv.org} (`green' open access).
+    \item Our results will be presented and promoted at scientific meetings where we aim to reach a diverse audience through the variety of science applications addressed as part of our efforts.
+    \item We will organize a community workshop in which the Gaia selection function experts will offer training to interested scientists in the use of our data products and tools (deliverable \ref{dev:wp1closing}). Our results from the science applications in work package \ref{wp:scienceappl} will serve as excellent worked examples.
+    \item We will discuss with colleagues providing courses in data analysis and statistics to science students how our methods and tools may be used in such courses. We will provide support to adapt our tools to the needs of the course instructors.
 \end{itemize}
+
+This project will collect the data needed to understand the Gaia selection function, such as the details of the actual scan law used or of the spacecraft operation interruptions. These data will be part of the tools needed to use the Gaia selection function and thus will be stored in a form suitable for computer use or for storage in a database.
+\begin{itemize}
+    \item All data generated/collected in this project will be made available publicly. This will be done through the ESA Gaia archives and any other astronomical data centres interested in hosting these data. In addition the data will be deposited with \url{https://zenodo.org}.
+    \item The source code for the computer tools will be made available publicly through well known open access source code repositories such as \url{http://github.com} or through code hosting services available at the institutes participating in this proposal.
+    \item A website will be setup (hosted by Leiden University) which will serve as entry point to the data, tools, and documentation generated in this project. To enhance visibility cross-links will be made with, for example, ESA websites related to Gaia.
+\end{itemize}
+
+The Gaia mission operations will end at the latest around end 2024 and the data processing will continue for a number years thereafter before the final (legacy) Gaia archive version can be released. This is beyond the lifetime of the project proposed here and we thus intend to transfer the expertise on the selection function to the DPAC aiming to make the selection function a data product provided by DPAC. This is most naturally done through the ESA archive and will include documentation. Hence a long term curation of the corresponding data is foreseen as part of the Gaia legacy archive maintained by ESA. Note that the maintenance of this archive is mandatory as the Gaia data is expected to set the standard in astrometric data for decades to come. \memo{Say something on long term code preservation, perhaps make the tools part of a larger ecosystem like astropy?}
 
 \subsection{b) Communication activities}
 \label{sec:communication-activities}
@@ -69,7 +77,4 @@
 \end{itemize}
 }
 
-\begin{itemize}
-    \item Academic outreach through publications, presentations at conferences and the above mentioned workshop(s).
-    \item Public outreach through results from the science applications in this project.
-\end{itemize}
+As mentioned above the community explicitly targeted by this proposal, professional astronomers, will be reached through the well known academic outreach channels: scientific publications, presentations at scientific conferences, and open access to the data and tools resulting from this project. In addition we plan to engage the general public through media releases of the results from application of the Gaia selection function to specific science cases, highlighting how the work on the selection function enables much better interpretation of, for example, binary star and exoplanet population statistics. This will also be used as a hook to explain how a science like astronomy can enhance data analysis capabilities for society at large. \memo{Like what specifically?}
