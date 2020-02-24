@@ -1,0 +1,41 @@
+\documentclass[article,a4paper,11pt,landscape]{memoir}
+\usepackage{pgfgantt}
+\usepackage{geometry}
+\geometry{hmargin=5pt,vmargin=5pt}
+
+\begin{document}
+  \centering
+
+  \begin{ganttchart}{1}{42}
+      \gantttitle{Year 1}{12}
+      \gantttitle{Year 3}{12}
+      \gantttitle{Year 2}{12}
+      \gantttitle{Year 4}{6} \ganttnewline
+      \gantttitle{H1}{6}
+      \gantttitle{H2}{6}
+      \gantttitle{H1}{6}
+      \gantttitle{H2}{6}
+      \gantttitle{H1}{6}
+      \gantttitle{H2}{6}
+      \gantttitle{H1}{6} \ganttnewline
+      \ganttgroup{CoG}{1}{42} \ganttnewline
+      \ganttgroup{WP1 Management}{1}{42} \ganttnewline
+      \ganttbar{Overall coordination}{1}{42} \ganttnewline
+      \ganttbar{Scientific coordination}{1}{42} \ganttnewline
+      \ganttmilestone[name=ko]{Kick-off meeting}{1} \ganttnewline
+      \ganttbar[name=adv]{Advertise positions}{1}{4} \ganttnewline
+      \ganttmilestone[name=hire]{Hiring of researchers}{4} \ganttnewline
+      \ganttmilestone[name=mtm]{Mid term meeting}{21} \\
+      \ganttlink[link mid=0.0]{ko}{adv}
+      \ganttlink[link mid=0.6]{adv}{hire}
+      \ganttlink[link mid=1.0]{ko}{mtm}
+      \ganttgroup{WP2 Selection function definition}{1}{12} \ganttnewline
+      \ganttbar[name=wp2t1]{Scientific coordination}{1}{12} \ganttnewline
+      \ganttbar[name=wp2t2]{R\&D formulation sel.~fun.}{1}{12} \ganttnewline
+      \ganttmilestone[name=selfunpaper]{Document on math.~formulation selection function}{12} \\
+      \ganttlink[link mid=0.0]{ko}{wp2t1}
+      \ganttlink[link mid=0.0]{ko}{wp2t2}
+      \ganttlink[link mid=0.6]{wp2t2}{selfunpaper}
+  \end{ganttchart}
+
+\end{document}
