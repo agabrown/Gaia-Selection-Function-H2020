@@ -4,11 +4,14 @@
 \geometry{hmargin=5pt,vmargin=5pt}
 
 \xdefinecolor{ElsaBlue}{rgb}{0.16, 0.16, 0.66}
+\xdefinecolor{mptab10blue}{rgb}{0.12156862745098039, 0.4666666666666667, 0.7058823529411765}
+\xdefinecolor{mptab10cyan}{rgb}{0.09019607843137255, 0.7450980392156863, 0.8117647058823529}
 
 \begin{document}
   \centering
 
   \begin{ganttchart}[
+          canvas/.append style={draw=none},
           y unit title=0.4cm,
           y unit chart=0.6cm,
           x unit=0.3cm,
@@ -19,6 +22,7 @@
           title left shift=.05,
           title right shift=-.05,
           title height=1.0,
+          bar/.append style={draw=none, fill=mptab10blue!70!white},
           bar height=.6,
           bar label font=\small,
           group label node/.append style={left=0cm},
@@ -43,35 +47,36 @@
       \ganttgroup{CoG}{1}{42} \ganttnewline
       \ganttgroup{WP1 Management}{1}{42} \ganttnewline
       \ganttbar[name=wp1t1]{WP1 T1.1}{1}{42} \ganttnewline
-      \ganttbar[name=wp1t2]{WP2 T2.2}{1}{42} \ganttnewline
+      \ganttbar[name=wp1t2]{WP1 T1.2}{1}{42} \ganttnewline
+      \ganttbar[name=wp1t3]{WP1 T1.3}{1}{42} \ganttnewline
       \ganttmilestone[name=ko]{Kick-off meeting}{0} \ganttnewline
       \ganttbar[name=adv]{Advertise positions}{1}{4} \ganttnewline
       \ganttmilestone[name=hire]{Hiring of researchers}{4} \ganttnewline
-      \ganttmilestone[name=d31]{D3.1}{12} \\
+      \ganttmilestone[name=d21]{Doc.~mathematical formulation}{12} \\
+      \ganttmilestone[name=d31]{Doc.~preliminary Gaia sel.~fun.}{18} \\
       \ganttmilestone[name=mtm]{Mid term meeting}{21} \\
-      \ganttmilestone[name=d41]{D4.1}{24} \\
-      \ganttmilestone[name=d32]{D3.2}{36} \\
-      \ganttmilestone[name=d111]{D1.11}{41} \\
-      \ganttmilestone[name=d112]{D1.12}{42} \\
-      \ganttmilestone[name=d42]{D4.2}{42} \\
+      \ganttmilestone[name=d41]{Public prototype implementation}{24} \\
+      \ganttmilestone[name=d32]{Docs.~Gaia sel.~fun}{36} \\
+      \ganttmilestone[name=d111]{Community workshop \& closing meeting}{41} \\
+      \ganttmilestone[name=d42]{Publicly available implementation}{42} \\
       \ganttlink[link mid=0.0]{ko}{adv}
       \ganttlink[link mid=0.6]{adv}{hire}
+      \ganttlink[link mid=0.5]{d21}{d31}
       \ganttlink[link mid=1.0]{ko}{d31}
       \ganttlink[link mid=1.0]{ko}{mtm}
       \ganttlink[link mid=1.0]{ko}{d41}
       \ganttlink[link mid=1.0]{ko}{d32}
       \ganttlink[link mid=1.0]{ko}{d111}
-      \ganttlink[link mid=0.9]{ko}{d112}
       \ganttlink[link mid=1.0]{ko}{d42}
+      \ganttlink[link mid=0.3]{d32}{d42}
       \ganttlink{d31}{d41}
       \ganttlink{d41}{d42}
       \ganttgroup{WP2 Selection function definition}{1}{12} \ganttnewline
       \ganttbar[name=wp2t1]{WP2 T2.1}{1}{12} \ganttnewline
       \ganttbar[name=wp2t2]{WP2 T2.2}{1}{12} \ganttnewline
-      \ganttmilestone[name=d21]{D2.1}{12} \\
       \ganttlink[link mid=0.0]{ko}{wp2t1}
       \ganttlink[link mid=0.0]{ko}{wp2t2}
-      \ganttlink[link mid=0.6]{wp2t1}{d21}
+      \ganttlink[link mid=0.5]{wp2t1}{d21}
       \ganttgroup{WP3 R\&D selection function}{1}{42} \ganttnewline
       \ganttbar[name=wp3t1]{WP3 T3.1}{1}{42} \ganttnewline
       \ganttbar[name=wp3t2]{WP3 T3.2}{6}{42} \ganttnewline
