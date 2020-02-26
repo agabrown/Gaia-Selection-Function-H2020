@@ -53,6 +53,14 @@ The overall work plan is structured as follows:
 \subsection{Dependencies}
 \label{sec:dependencies}
 
+\figrefcap{fig:dependencies} shows the dependencies between the various work packages in \acro. The arrows indicate a ‘depends on’ relationship. For example WP\ref{wp:selfuncombine} depends on WP\ref{wp:selfungaia} for the details of the Gaia selection function in order to produce combined selection functions. The reverse dependency shows that studying combined selection function will also lead to constraints on the Gaia selection function. WP\ref{wp:scienceappl} provides the science applications which depend on WPs~\ref{wp:selfungaia} and \ref{wp:selfuncombine} for the selection functions to apply and on WP\ref{wp:selfunimplementation} for the tools to do so. In return WP\ref{wp:scienceappl} provides crucial validation of the results from WPs~\ref{wp:selfungaia} and \ref{wp:selfuncombine} and extensive testing of the implementation provided by WP\ref{wp:selfunimplementation}. WP\ref{wp:selfundefinition} provides the framework for the other WPs as indicated by the grey rectangle.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{dependencies.pdf}
+    \caption{The dependencies between the work packages in \acro.}
+    \label{fig:dependencies}
+\end{figure}
 
 \section{Management structure, milestones and procedures}
 \label{sec:management}
@@ -60,20 +68,63 @@ The overall work plan is structured as follows:
 \subsection{Management}
 \label{sec:mgtdetails}
 
+The {\acro} consortium being relatively small the management structure can be kept simple in order to make the coordination of the efforts efficient. The management consists of three levels reflecting the structuring of the {\acro} work packages.
+\begin{description}
+    \item[Administrative management] This first level concerns the administrative management of {\acro}, including financial management and reporting to the European Commission. It is carried out by the {\acro} coordinator (A.~Brown) with the support of the Leiden Observatory institute management team.
+    \item[Overall project management and coordination] This second level concerns the global scientific and technical control and coordination of the project, ensuring that the tasks are properly carried out and remain on schedule, and that the objectives of {\acro} are fulfilled. It is carried out by the \textbf{{\acro} executive board}, formed by the managers of the work packages: A.~Brown, R.~Drimmel, H.-W.~Rix, and V.~Belokurov. In order to keep communications within the consortium as efficient as possible the main contacts at NYU and MONA (D.~Hogg and A.~Casey) will have a standing invitation to attend the executive board meetings (see below).
+    \item[Work package management] The third level of management concerns the main work packages. Each WP manager has the responsibility of supervising the execution of the core tasks assigned to their host institution, the work of the partners carrying out specific parts of the tasks attached to the work package, and report to the executive board accordingly.
+    
+    We do not further specify the management procedures for each work package beyond the items given in \secref{sec:procedures}, since the work in each of the work packages WP\ref{wp:selfundefinition} to WP\ref{wp:scienceappl} will be integrated in already existing and well established teams in each host institution.
+\end{description}
+
+This management structure together with the procedures described below is sufficient for a relatively small team spread over only six institutes working together closely in a scientific environment. Much of the coordination and supervision will take place through day-to-day contacts at the institutes involved and between institutes via e-mail and ad-hoc telecons. Similar structures were applied successfully to other EU-funded projects (FP7 GENIUS Collaborative project, FP7 GREAT Marie-Curie Initial Training Network) in which the coordinator was an active participant.
+
+\subsection{Innovation management}
+\label{sec:innovationmgmt}
+
+The aim of {\acro} is to develop and deliver a new product (the Gaia selection function and tools to apply it) to the market of astronomy researchers. The wish for a selection function for the Gaia survey has been expressed on numerous occasions, meaning that this product will readily find a large user base. In order to uncover opportunities the astronomical community will be engaged during the lifetime of {\acro} through the availability of a prototype implementation of the Gaia selection function. The users thereof will be asked for feedback in the form of missing features or desired improvements. Community feedback wll also be obtained through presentation of {\acro} results at relevant scientific conferences.
+
 \subsection{Procedures and reporting}
 \label{sec:procedures}
+
+We list here the procedures that will apply to the management of {\acro}:
+\begin{itemize}
+    \item The {\acro} coordinator will report to the European Commission following the rules applicable for research and innovation projects within the Horizon 2020 programme.
+    \item {\acro} will hold at least three plenary meetings open to participation of all its members: the kick-off, mid-term, and closing meeting. The participation of the partner institute coordinators (or a representative) will be mandatory. Other plenary meetings may be held if needed.
+    \item Specialized meetings or workshops will be organized on an `as-needed' basis by the WP managers.
+    \item The executive board will hold teleconferences at least once a month to track the status of the tasks. The minutes of these teleconferences will be made available to the members of the consortium.
+    \item The executive board shall ensure the coordination of the {\acro} work with the wider activities on the Gaia mission and its data releases, in particular ensuring the coordination with ESA and DPAC (see \secref{sec:dissemination-exploitation}). This can be done efficiently through membership of several {\acro} team members in DPAC.
+\end{itemize}
 
 \subsection{Consortium agreement}
 \label{sec:cons_agreement}
 
+The internal workings of {\acro} and the roles and responsibilities of the partners will be formalized through a consortium agreement will be drawn up and agreed at the start of the programme. It will define the decision taking procedures in {\acro} and the mechanisms for conflict resolution, which will be channelled through the Executive Board, as well as the management of intellectual property rights as described in \secref{sec:openipr}.
+
 \subsection{Recruitment strategy}
 \label{sec:recruit}
 
-\milestone[1]{Kick-off meeting}{Organized by {\acro} board}{WP\ref{wp:management}}
-\milestone[12]{Document on mathematical formulation of selection function submitted to peer-reviewed journal}{Document approved by {\acro} board}{WP\ref{wp:selfundefinition}}
+The recruitment policy for {\acro} will conform to the principles of the European Charter for Researchers and the Code of Conduct for their recruitment. It will take place in a globally coordinated way during the six-month setup phase described in \secref{sec:wptiming}, placing an emphasis on individual excellence and capacity for team working, while taking care to ensure equal opportunity and gender balance.
+
+%%%%%%%%%%%%
+% MILESTONES
+%%%%%%%%%%%%
+
+\milestone[1]{Kick-off meeting}{Organized by {\acro} executive board}{WP\ref{wp:management}}
+\milestone[4]{Hiring of researchers}{Partners notify {\acro} executive board}{WP\ref{wp:management}}
+\milestone[12]{Document on mathematical formulation of selection function submitted to peer-reviewed journal}{Document approved by {\acro} executive board}{WP\ref{wp:selfundefinition}}
+\milestone[18]{Document describing the preliminary Gaia selection function.}{Document approved by {\acro} executive board}{WP\ref{wp:selfungaia}}
+\milestone[21]{Mid-term meeting and review}{Evaluation report by {\acro} executive board}{WP\ref{wp:management}}
+\milestone[24]{Public prototype of selection function implementation}{Verified by {\acro} executive board}{WP\ref{wp:selfunimplementation}}
+\milestone[36]{Papers and documentation describing the Gaia and combined selection functions ready to submit to peer-reviewed journals}{Verified by {\acro} executive board}{WP\ref{wp:selfungaia}, \ref{wp:selfunimplementation}, \ref{wp:selfuncombine}}
+\milestone[41]{Closing meeting and community workshop}{Organized by {\acro} executive board}{WP\ref{wp:management}}
+\milestone[42]{Publicly available selection function implementation, tools and data}{Verified by {\acro} executive board}{WP\ref{wp:management}, \ref{wp:selfunimplementation}}
 
 \makemilestoneslist
 
+%%%%%%%
+% RISKS
+%%%%%%%
 \criticalrisk{Risk to this project.}{WP\,\ref{wp:management}}{Mitigation measure}
 
 \makerisklist
