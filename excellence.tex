@@ -26,14 +26,13 @@ when a collision with a dwarf galaxy took place which contributed to the build-u
 thick disk \cite{2018Natur.563...85H, 2018MNRAS.478..611B, 2019arXiv190904679B}. 
 
 \By{HWR}{But with numerous exciting results that are starting to transform many different fields of astrophysics,
-it remains true that most results to date have focussed on `low hanging fruit' in the Gaia data archive, and barely scratched the surface of the Gaia data information content. 
+it remains true that most of these to date have focused on `low hanging fruit' in the Gaia data archive, and barely scratched the surface of the Gaia data information content. 
 Specifically, almost all analyses to date have exploited the astounding Gaia data precision and accuracy
-on all the individual objects, but have side-stepped performing or exploiting the \textsl{statistical distribution of objects with certain properties}, i.e. population studies. For example, a result as elementary as a good determination of the Milky Way's radial profile of disk stars -- by simply counting them as a function of their position -- has yet to be carried out.  This is because such studies inevitably require knowledge of the ``selection function'': what is the probability that an object of certain physical properties at a certain position in space would be catalogued by Gaia? This knowledge is indispensible for any population study of objects; and population studies are the very core of the Gaia mission, with its billions-of-objects catalog. \\
-In practice the community to date has often resorted to drastic cuts, on object properties and Gaia data quality flags,
-in order to arrive at samples whose selection function is very simple (avoiding for example the well known problems associated with the estimation of distance as the inverse of the parallax \cite{2018A&A...616A...9L}). Yet, such analyses grossly under-exploit the information content of the Gaia data set, often by orders of magnitude. \\
+on all the individual objects, but have side-stepped performing or exploiting the \textsl{statistical distribution of objects with certain properties}, i.e. population studies. For example, a result as elementary as a good determination of the Milky Way's radial profile of disk stars -- by simply counting them as a function of their position -- has yet to be carried out.  This is because such studies inevitably require knowledge of the ``selection function'': what is the probability that an object of certain physical properties at a certain position in space would be catalogued by Gaia? This knowledge is indispensable for any population study of objects; and population studies are the very core of the Gaia mission, with its billions-of-objects catalog. \\
+In practice the community so far has often resorted to drastic cuts, on object properties and Gaia data quality flags, to arrive at samples whose selection function is very simple (avoiding for example the well known problems associated with the estimation of distance as the inverse of the parallax \cite{2018A&A...616A...9L}). Yet, such analyses grossly under-exploit the information content of the Gaia data set, often by orders of magnitude. \\
 Consequently, many high-profile science cases for which Gaia was
-built cannot be realized, because the selection function of the Gaia survey combined with the data cuts leads to
-unrepresentative samples is not known, neither to the Gaia DPAC team, not to the community. It is the single goals of this proposal to remedy this shortcoming and dramatically boost (yes, yet further!) the astrophysical utility of the Gaia mission.}
+built cannot be realized, because the selection function of the Gaia survey is not known, neither to the Gaia DPAC team, not to the community. When  combined with the some additional data cuts, this leads to
+unrepresentative samples. It is the single goal of this proposal to remedy this shortcoming and dramatically boost (yes, yet further!) the astrophysical utility of the Gaia mission.}
 
 The Gaia selection function is a highly non-trivial combination of the on-board selection of sources, telemetry
 losses, selections on data quality during the data processing, and selections on quality before the publication of the
@@ -114,20 +113,24 @@ Each of the above examples complicates the Gaia survey selection function which 
 \subsection{Scientific motivation}
 \label{sec:scientific-motivation}
 
-\subsubsection{The Selection-Function: Definition and Indispensability}
+\subsubsection{The Selection-Function: Definition and Indispensability \By{HWR}{}}
+%
+%\textbf{Douglas: Apologies, I haven't found time to properly attempt this yet.}
+%
+%\By{HWR}{putting meat on the subsequent section, drawing on a Hogg\&Rix2020 in prep paper on 'selection functions'}
 
-\textbf{Douglas: Apologies, I haven't found time to properly attempt this yet.}
-
-\By{HWR}{putting meat on the subsequent section, drawing on a Hogg\&Rix2020 in prep paper on 'selection functions'}
-
-For any `statistical' study using a catalog, any study where it matters quantitatively how common or rare a certain type of object or circumstance is, the selection function of a catalog is arguably as important as the catalog itself. The \textit{selection function}, $S(y)$, a function of the observable (and thereby underlying physical) properties, $y$, of any astronomical objects that specifies what the probability is that an object of properties $y$ will enter the (Gaia) catalog, and if so with what quality flags. A generic and central way of learning from this catalog, is to envision a set of physical or mathematical models $\lambda_0(z\given\theta)$ -- that predicts the
+For any `statistical' study using a catalog, any study where it matters quantitatively how common or rare a certain type of object or circumstance is, the selection function of a catalog is arguably as important as the catalog itself. The catalog \textit{selection function}, $S_C(y)$, is a function of the observable (and thereby underlying physical) properties, $y$, of any astronomical objects; and it specifies the probability that an object of properties $y$ will enter the (Gaia) catalog. A generic and central way of learning from any catalog, is to envision a set of physical or mathematical models $\lambda_0(z\given\theta)$ -- that predicts the
 distribution of true quantities $z$, given a set of model parameters $\theta$ -- and then ask
-why the `data' (the catalog entries) $\{y\}$ tell us about the relative plausibility. The relation between quantities is generically
+what the `data' (the catalog entries) $\lambda_C(y)$ tell us about the relative plausibility. 
+The relation between these quantities is generically
 \begin{equation}
-\lambda(y\given\theta) = S(y)\,\int\lambda_0(z\given\theta)\,p(y\given z)\,dz,
-\quad,
+\lambda_C(y\given\theta) = S_C(y)\,\int\lambda_0(z\given\theta)\,p(y\given z)\,dz,
 \end{equation}
-which immediately shows that no inference is possible without knowledge of $S(y$). 
+where $z$ is the vector of true values (\emph{vs.} the observed values $y$).
+\textbf{This immediately shows that no inference, is possible without knowledge of S}$_C(y)$. Most commonly the quantities $y_s$ on which the selection function really depends
+is only a modest subset of all the catalog entries, or all the quantities that are being modelled, $y$, the selection function separates $S_C(y_s) \times S_0(y_{other})$,
+with $S_0(y_{other})\approx 1$. For the Gaia catalog selection function, the quantities $y_s$ are foremost: the sky position $(\alpha,\delta)$ of an object, its G-magnitude and its BP$_$RP color\footnote{For objects with very high proper motions, e.g. in the Solar system, the selection function may also depend on $\vec{\mu}$; this interesting regime, affecting a very small fraction of the Gaia detections, is not focus of this proposal.} These four quantities are a small subset of the Gaia catalog entries. 
+
 
 
 A selection function quantifies how the objects in an astronomical catalogue were chosen from the countless asteroids, planets, stars and galaxies in the Universe. Without the selection function,
