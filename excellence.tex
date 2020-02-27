@@ -125,11 +125,29 @@ what the `data' (the catalog entries) $\lambda_C(y)$ tell us about the relative 
 The relation between these quantities is generically
 \begin{equation}
 \lambda_C(y\given\theta) = S_C(y)\,\int\lambda_0(z\given\theta)\,p(y\given z)\,dz,
+\label{eqn:selfunc_definition}
 \end{equation}
 where $z$ is the vector of true values (\emph{vs.} the observed values $y$).
 \textbf{This immediately shows that no inference, is possible without knowledge of S}$_C(y)$. Most commonly the quantities $y_s$ on which the selection function really depends
 is only a modest subset of all the catalog entries, or all the quantities that are being modelled, $y$, the selection function separates $S_C(y_s) \times S_0(y_{other})$,
-with $S_0(y_{other})\approx 1$. For the Gaia catalog selection function, the quantities $y_s$ are foremost: the sky position $(\alpha,\delta)$ of an object, its G-magnitude and its BP$_$RP color\footnote{For objects with very high proper motions, e.g. in the Solar system, the selection function may also depend on $\vec{\mu}$; this interesting regime, affecting a very small fraction of the Gaia detections, is not focus of this proposal.} These four quantities are a small subset of the Gaia catalog entries. 
+with $S_0(y_{other})\approx 1$. For the Gaia catalog selection function, the quantities $y_s$ are (in presumably good approximation): the sky position $(\alpha,\delta)$ of an object, its G-magnitude and its BP$\_$RP color.\footnote{For objects with very high proper motions, e.g. in the Solar system, the selection function may also depend on $\vec{\mu}$; this interesting regime, affecting a very small fraction of the Gaia detections, is not focus of this proposal.} These four quantities are a small subset of the Gaia catalog entries. So, why is it hard to determine a good approximation of the Gaia catalog selection function, $S_C(y_s)$? This is because 
+$S_C(y_s)$ is such a complex function of the $y_s$: the sky position enters through the source density (``crowding'') and the scanning pattern, which sets the number of observation epochs and the distribution of roll angles; the roll angle in turn determines the (sky) direction in which the BP, RP and RVS spectra are dispersed, which in turn determines the probability that they are rendered unusable dues to source-source contamination. The magnitudes determine not only the obvious aspect of the photon noise, but -- in conjunction with the source density -- also the decision of parsing the data into postage stamps for processing.
+
+Given that $S_C(y_s)$ has not (yet) been determined for Gaia, why is it that many results of wide accepted results have already come from analysing the distribution of Gaia catalog entries, for large samples? This is for a number of reasons: first, some studies have essentially ignored (at their own peril) the selection function, thereby implicitly assuming $S_C(y_s)\approx 1$ for the regime of interest. The second regime is that one can make additional ``sample cuts'' by defining
+\begin{equation*}
+    S_{cut}(y) = \begin{cases} 1 &\mbox{if\ \ } y \mbox{\ \ within cuts} \\ 
+0 &\mbox{\ \ else} \end{cases}
+\end{equation*}
+If one then models only the restricted data $\lambda_{cut}(y\given\theta)$, Eq.\ref{eqn:selfunc_definition} becomes simple,
+as the right hand side can be approximated as 
+\begin{equation*}
+    S_C(y_s)\times S_{cut}(y) \approx  \begin{cases} 1 &\mbox{if\ \ } y \mbox{\ \ within cuts} \\ 
+0 &\mbox{\ \ else.} \end{cases}
+\end{equation*}
+The third regime is that one can analyze the distribution of quantities in $p(y_{other})$, or $p(y_{other}~|~y_s)$: the most obvious case is to analyze the 3D kinematic in the Solar neighbourhood. The last regime is of course, that the selection function $S_C(y_s)$ has been ``properly'' determined and included in the modelling [REF]; however this has only happened to date for very small sub-regimes of the space spanned by $y_s$ in the Gaia catalog.
+
+
+\textbf{It is the comprehensive construction of this (approximate) selection function, $S_C(y_s)$, that is at the heart of this proposal.} As we now sketch with a few examples, without its robust and precise knowledge it is impossible to extrapolate from \textit{statements about the objects in a catalogue} into \textit{insights in fundamental physics and astrophysics}.
 
 
 
