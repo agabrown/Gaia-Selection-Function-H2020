@@ -17,9 +17,9 @@
   \begin{wpobjectives}
     The objective of this work package is to research and develop in detail the description and modelling of the Gaia survey selection function.
     \begin{enumerate}
-      \item Develop the overall survey selection function and using that as a starting point create more specialized selection functions, focusing for example the Gaia astrometric, photometric, and spectroscopic surveys and combinations thereof. In addition a selection function for specific subsets of the Gaia survey will be developed, such as binary stars and exoplanets, variable stars, solar system objects, extragalactic sources. It will be essential here to agree to the scope of the work early on, where the development of further specialized Gaia selection function is left to the community who can make use of the tools developed in this work package. 
+      \item Develop the overall survey selection function and using that as a starting point to create more specialized selection functions, focusing for example the Gaia astrometric, photometric, and spectroscopic surveys and combinations thereof. In addition a selection function for specific subsets of the Gaia survey will be developed, such as binary stars and exoplanets, variable stars, solar system objects, extragalactic sources. It will be essential here to agree to the scope of the work early on, where the development of further specialized Gaia selection functions is left to the community who can make use of the methods and tools developed in this work package. 
       \item Investigate to what extent detailed information is needed on the Gaia pointing history, its on-board detection algorithm, and the data losses introduced along the various steps from on-board measurement to the final data products. Can the selection function be reverse engineered from publicly available information?
-      \item Interface with DPAC to gain a deeper understanding of the many ingredients of the Gaia selection function, in particular of aspects where public information is not (yet) available. \memo{This should be formulated more clearly.}
+      \item Interface with DPAC to gain a deeper understanding of the many ingredients of the Gaia selection function and collect the information necessary to describe or model spacecraft or data processing pipeline decisions that affect the selection function.
     \end{enumerate}
   \end{wpobjectives}
 
@@ -31,27 +31,32 @@
 
     \wptask{UCAM}{UCAM}{1}{\duration}{Scientific coordination}{
       \label{task:wp3coordination}
-       Scientific coordination of the research and development of the selection function and coordination of writing the paper corresponding to deliverable \ref{dev:wp3GSFfinal}.
+       Scientific coordination of the research and development of the selection function and coordination of writing the paper corresponding to deliverable \ref{dev:wp3GSFfinal} (1 UCAM person-month). This includes planning the work to be done, assigning sub-tasks and organizing the necessary meetings to discuss progress.
     }
-    \wptask{UCAM}{All other}{7}{\duration}{R\&D top level selection functions}{
+    \wptask{ULEI}{ULEI}{7}{\duration}{Collect information from DPAC}{
+        \label{task:wp3collectinfo}
+        Interface with DPAC to collect the necessary information to describe or model the events/decisions on board Gaia and the decision in the data processing pipelines that affect the selection function (2 ULEI person-months).
+    }
+    \wptask{UCAM}{NYU}{7}{\duration}{R\&D top level selection functions}{
       \label{task:wp3toplevelGSF}
-      Research and development of the top-level Gaia selection function which will describe the probability that a source enters the Gaia astrometric, photometric or radial velocity surveys, and combinations thereof.
+      Research and development of the top-level Gaia selection function which will describe the probability that a source enters the Gaia astrometric, photometric or radial velocity surveys, and combinations thereof (15 UCAM + 1 NYU person-months).
     }    
-    \wptask{MPIA}{All other}{7}{\duration}{R\&D spectroscopic selection functions}{
+    \wptask{MPIA}{UCAM, MONA}{7}{\duration}{R\&D spectroscopic selection functions}{
       \label{task:wp3spectroscopicGSF}
-      Research and development of the Gaia spectroscopic selection function. This refers to the probability that a BP/RP and/or and RVS spectrum was measured for a source in the Gaia survey.
+      Research and development of the Gaia spectroscopic selection function. This refers to the probability that a BP/RP and/or and RVS spectrum was measured for a source in the Gaia survey (6 MPIA + 3 UCAM + 2 MONA person months).
     }
-    \wptask{INAF}{All other}{7}{\duration}{R\&D specialized selection functions}{
+    \wptask{INAF}{INAF}{7}{\duration}{R\&D specialized selection functions}{
       \label{task:wp3specializedGSF}
-      Research and develop the methods needed to create selection functions for specific subsets of the Gaia survey, such as binary stars or extragalactic objects. Apply this to example cases.
+      Research and develop the methods needed to create selection functions for specific subsets of the Gaia survey, such as binary stars or extragalactic objects. Apply this to example cases (11 INAF person-months).
     }
 
     \paragraph{Role of partners}
     \begin{description}
       \item[UCAM] will lead Tasks~\ref{task:wp3coordination} and \ref{task:wp3toplevelGSF}.
+      \item[ULEI] will lead Task~\ref{task:wp3collectinfo}.
       \item[MPIA] will lead Task~\ref{task:wp3toplevelGSF}.
       \item[INAF] will lead Task~\ref{task:wp3specializedGSF}
-      \item[All partners] will contribute to the research and development of the Gaia selection functions. 
+      \item[All partners] will contribute to the research and development of the Gaia selection functions and to the writing of the resulting papers. 
     \end{description}
   \end{wpdescription}
 
@@ -60,7 +65,6 @@
     % \wpdeliverable[date]{R}{PU}{A report on \ldots}
     \wpdeliverable[18]{UCAM}{R}{PU}{Documentation of preliminary top level Gaia selection functions.}\label{dev:wp3version1selfun}
     \wpdeliverable[36]{UCAM}{R}{PU}{Documentation of the Gaia selections functions (also to be submitted to as papers to a peer-reviewed journal)}\label{dev:wp3GSFfinal}
-    \memo{Add further deliverables? Such as intermediate reports for each of the tasks above?}
   \end{wpdeliverables}
 
 \end{workpackage}
