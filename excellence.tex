@@ -96,10 +96,7 @@ From the early days of the Gaia mission it was foreseen to have incremental data
 
 The next releases foreseen are Gaia EDR3 in the third quarter of 2020 and Gaia DR3 in the second half of 2021. The following release (Gaia DR4) will be based on all data collected during the nominal mission lifetime of Gaia and feature the full suite of data products, including the epoch data (individual measurements) for the astrometry, photometry, and spectroscopy\footnote{See the \href{https://www.cosmos.esa.int/web/gaia/release}{Gaia data release scenario} pages.}. These future Gaia data releases are expected to have an even larger impact on astronomy due to the much richer set of data products allowing for the combination of high accuracy astrometry and radial velocities with detailed astrophysical characterization of the source in the Gaia catalogue (stellar parameters including chemical compositions and variability, parameters of multiple stars and exoplanets, medium resolution spectra around the Ca triplet region for millions of stars to magnitude 13, low resolution prism spectrophotometry for all sources in the Gaia catalogue). 
 
-Despite the major successes of Gaia DR1 and Gaia DR2 there is one serious weakness of the releases: % is 
-that the DPAC does not provide a detailed selection function for the Gaia survey. This aspect has never been included in the funded DPAC efforts and will not be added as DPAC work in the future. This implies that major Gaia science cases cannot be addressed by the astronomical community to the full potential of the quality of the data. \By{ARC}{Do we need to argue why this needs to be done \emph{now}? If so I would motivate with something like: The time to research a detailed selection function for the Gaia survey is \emph{now}, while those with Gaia expertise remain within DPAC and as we near closer to the final Gaia data release.} In the next section we motivate why a detailed selection function is needed and how this will enhance the scientific exploitation of the data from this flagship European space mission.
-
-
+Despite the major successes of Gaia DR1 and Gaia DR2 there is one serious weakness of the releases: the DPAC does not provide a detailed selection function for the Gaia survey. This aspect has never been included in the funded DPAC efforts and will not be added as DPAC work in the future. This implies that major Gaia science cases cannot be addressed by the astronomical community to the full potential of the quality of the data. In \secref{sec:scientific-motivation} we motivate why a detailed selection function is needed and how this will enhance the scientific exploitation of the data from this flagship European space mission. 
 
 \paragraph{Gaia instruments and survey strategy} For the understanding of the work proposed here it is useful to briefly summarize the characteristics of the Gaia mission and how the measurements are collected and subsequently processed on ground. Much more detail can be found in the paper describing the Gaia mission \cite{2016A&A...595A...1G}. The Gaia spacecraft and its instruments were designed to collect data that will allow the determination of highly accurate positions, parallaxes, and proper motions for $>1$ billion sources brighter than magnitude $20.7$ in its white-light photometric band $G$ (covering the range $330$--$1050$~nm). The astrometry is complemented by multi-colour photometry, measured for all sources observed by Gaia, and radial velocities which are collected for stars brighter than $G\approx17$. Gaia carries two telescopes of which the collected light is combined into a single focal plane servicing the three main instruments. The astrometric instrument collects source images in the $G$-band, where the fundamental inputs to the astrometric data processing consist of the precise times when the image centroids pass a fiducial line in the focal plane of the instrument. The photometric instrument is realised through two prisms dispersing the light entering the field of view of two dedicated sets of CCDs. The Blue Photometer (BP) operates over the wavelength range $330$--$680$ nm, while the Red Photometer (RP) covers the wavelength range $640$--$1050$ nm. The data collected by the photometric instrument consists of low resolution spectrophotometric measurements of the source spectral energy distributions. The spectroscopic instrument, also called the radial-velocity spectrometer (RVS), collects medium resolution ($R\sim11\,700$) spectra over the wavelength range $845$--$872$~nm, centred on the Calcium triplet region. The spectra are collected for all sources to $G\approx17$ (16$^\text{th}$ magnitude in the RVS filter band).
 
@@ -111,9 +108,16 @@ Although the Gaia survey selection function is seemingly very simple, with only 
 \begin{itemize}
     \item The data collection on the spacecraft is limited by the amount of sources that can be handled at any on time, meaning that for dense regions on the sky (above $10^6$, $750\,000$, and $35\,000$ sources~deg$^{-2}$ for the astrometric, photometric, and spectroscopic instruments respectively) not all sources can be measured, leading to brighter effective survey limits in those regions. In addition the on-board storage capacity limitations combined with available ground station time lead to deletion of data on occasions when both Gaia telescopes are scanning along the Galactic plane for prolonged periods of time.
     \item Despite the optimal sky survey strategy realized through the revolving scanning technique, the number of times any given source is observed does vary with celestial position, in particular with the ecliptic latitude.
-    \item At each of the various on-ground data processing steps decisions are taken on which data and/or sources to process, where periods of ``bad inputs'' are excluded. This leads to gaps in the time coverage of measurements for a given source or to effectively brighter survey limits covering certain time periods (which translates to certain areas on the sky). Additionally, in early data releases the processing for certain data products may be limited to brighter sources or sources with specific astrophysical characteristics.
+    \item Decisions are made along each of the various on-ground data processing steps on which data and/or sources to process, where periods of "bad inputs" are excluded. This leads to gaps in the time coverage of measurements for a given source or to effectively brighter survey limits covering certain time periods (which translates to certain areas on the sky). Additionally, in early data releases the processing for certain data products may be limited to brighter sources or sources with specific astrophysical characteristics.
 \end{itemize}
-Each of the above examples complicates the Gaia survey selection function which in the end is very non-trivial to describe and handle. Nevertheless we must make an effort to provide the best possible description of the selection function as well as tools to incorporate it into scientific analyses as we will motivate next.
+Each of the above examples complicates the Gaia survey selection function which in the end is very non-trivial to describe and handle. Nevertheless we must make an effort to provide the best possible description of the selection function as well as tools to incorporate it into scientific analyses as we motivate in \secref{sec:scientific-motivation}.
+
+\paragraph{Timing of this proposal} We stress here that the time to research a detailed selection function for the Gaia survey is \emph{now}:
+\begin{itemize}
+    \item To understand the selection function in detail, accounting for all the issues described above and in \secref{sec:concept}, requires access to the Gaia spacecraft and data processing expertise within DPAC and ESA. It is thus essential to start this work while the DPAC is still active.
+    \item Already now the availability of a selection function for the Gaia DR2 catalogue would represent a major boost to the science exploitation of those data.
+    \item Which each upcoming Gaia data release the complexities of the selection function will increase thus making any effort postponed to the future much more costly in terms of human resources required.
+\end{itemize}
 
 \subsection{Scientific motivation}
 \label{sec:scientific-motivation}
@@ -126,47 +130,64 @@ Each of the above examples complicates the Gaia survey selection function which 
 
 For any `statistical' study using a catalog, for any study where it matters quantitatively how common or rare a certain type of object or circumstance is, the selection function of a catalog is arguably as important as the catalog itself. The catalog \textit{selection function}, $S_C(y)$, is a function of the observable (and thereby underlying physical) properties, $y$, of any astronomical objects; and it specifies the probability that an object of properties $y$ will enter the (Gaia) catalog. A generic and central way of learning from any catalog, is to envision a set of physical or mathematical models $\lambda_0(z\given\theta)$ -- that predicts the
 distribution of true quantities $z$, given a set of model parameters $\theta$ -- and then ask
-what the `data' (the catalog entries) $\lambda_C(y)$ tell us about the relative plausibility. 
+what the `data' (the catalog entries) $\lambda_C(y\given\theta)$ tell us about the relative plausibility. 
 The relation between these quantities is generically
 \begin{equation}
-\lambda_C(y\given\theta) = S_C(y)\,\int p(y\given z)\,\lambda_0(z\given\theta)\,{\textrm{d}} z,
+\lambda_C(y\given\theta) = S_C(y)\,\int p(y\given z)\,\lambda_0(z\given\theta)\,{\textrm{d}} z = S_C(y)\,\lambda_0(y\given\theta),
 \label{eqn:selfunc_definition}
 \end{equation}
-where $z$ is the vector of true values (\emph{vs.} the observed values $y$).
-\textbf{This immediately shows that no inference, is possible without knowledge of S}$_C(y)$. Most commonly the quantities $y_s$ on which the selection function really depends
-is only a modest subset of all the catalog entries, or all the quantities that are being modelled, $y$, the selection function separates $S_C(y_s) \times S_0(y_{other})$,
-with $S_0(y_{other})\approx 1$. For the Gaia catalog selection function, the quantities $y_s$ are (in presumably good approximation): the sky position $(\alpha,\delta)$ of an object, \By{ARC}{its magnitude in the visible G band, and its magnitude in the BP and RP spectrophotometric bands.} its G-magnitude and its BP$\_$RP color.\footnote{For objects with very high proper motions, e.g. in the Solar system, the selection function may also depend on $\vec{\mu}$; this interesting regime, affecting a very small fraction of the Gaia detections, is not focus of this proposal.} These four quantities are a small subset of the Gaia catalog entries. So, why is it hard to determine a good approximation of the Gaia catalog selection function, $S_C(y_s)$? This is because 
+where $z$ is the vector of true values (\emph{vs.} the observed values $y$). 
+\textbf{This immediately shows that no inference, is possible without knowledge of $\mathbf{S_C(y)}$}. Most commonly the quantities $y_s$ on which the selection function really depends is only a modest subset of all the catalog entries, or all the quantities that are being modelled, $y$, the selection function separates $S_C(y_s) \times S_0(y_{other})$, with $S_0(y_{other})\approx 1$. 
+For the Gaia catalog selection function, the quantities $y_s$ are (in presumably good approximation): the sky position $(\alpha,\,\delta)$ of an object, its magnitude in the visible G band, and its BP$-$RP color from the spectrophotometric bands.\footnote{For objects with very high proper motions, e.g. in the Solar system, the selection function may also depend on $\vec{\mu}$; this interesting regime, affecting a very small fraction of the Gaia detections, is not focus of this proposal.} These four quantities are a small subset of the Gaia catalog entries. So, why is it hard to determine a good approximation of the Gaia catalog selection function, $S_C(y_s)$? This is because 
 $S_C(y_s)$ is such a complex function of the $y_s$: the sky position enters through the source density (``crowding'') and the scanning pattern, which sets the number of observation epochs and the distribution of roll angles; the roll angle in turn determines the (sky) direction in which the BP, RP and RVS spectra are dispersed, which in turn determines the probability that they are rendered unusable dues to source-source contamination. The magnitudes determine not only the obvious aspect of the photon noise, but -- in conjunction with the source density -- also the decision of parsing the data into postage stamps for processing.
 
 Given that $S_C(y_s)$ has not (yet) been determined for Gaia, why is it that many %results of
-widely accepted results have already come from analysing the distribution of Gaia catalog entries, for large samples? This is for a number of reasons: first, some studies have essentially ignored (at their own peril) the selection function, thereby implicitly assuming $S_C(y_s)\approx 1$ for the regime of interest. The second regime is that one can make additional ``sample cuts'' by defining
+widely accepted results have already come from analysing the distribution of Gaia catalog entries for large samples? This is for a number of reasons. First, some studies have essentially ignored (at their own peril) the selection function, thereby implicitly assuming $S_C(y_s)\approx 1$ for the regime of interest. The second and most frequent regime so far is that one can make additional ``sample cuts'' by defining
 \begin{equation*}
     S_{cut}(y) = \begin{cases} 1 &\mbox{if\ \ } y \mbox{\ \ within cuts} \\ 
 0 &\mbox{\ \ else} \end{cases}
 \end{equation*}
-If one then models only the restricted data $\lambda_{cut}(y\given\theta)$, Eq.\ref{eqn:selfunc_definition} becomes simple,
-as the right hand side can be approximated as \By{ARC}{I'm not sure it can be \emph{approximated as}, but rather `\emph{is assumed as}' since this is the same as $S_C(y_s) \approx 1$, right?}
+If one then models only the restricted data $\lambda_{cut}(y\given\theta)$, Eq.\ref{eqn:selfunc_definition} becomes simple, as one the can sensibly adopt
+%as the right hand side can be supposedly approximated as 
+%\By{ARC}{I'm not sure it can be \emph{approximated as}, but rather `\emph{is assumed as}' since this is the same as $S_C(y_s) \approx 1$, right?}
+%\begin{equation*}
+%    S_C(y_s)\times S_{cut}(y) \approx  \begin{cases} 1 &\mbox{if\ \ } y \mbox{\ \ within cuts} \\ 
+%0 &\mbox{\ \ else.} \end{cases}
+%\end{equation*}
+%\By{MF}{I feel this above sentence is not very clear. What we are trying to say is that $S_C \times S_{cut} \approx 1$ and thus $\lambda_C \approx \lambda_0$ over the parameter space of interests. 
+%If one then models only the restricted data $\lambda_{cut}(y\given\theta)$, Eq.\ref{eqn:selfunc_definition} becomes simpler,
+%as one can assume that 
 \begin{equation*}
-    S_C(y_s)\times S_{cut}(y) \approx  \begin{cases} 1 &\mbox{if\ \ } y \mbox{\ \ within cuts} \\ 
+    \lambda_{cut}(y\given\theta) \approx S_C(y) \times S_{cut}(y)\, \lambda_0(y\given \theta) \approx  \begin{cases}  \lambda_0(y\given \theta) &\mbox{if\ \ } y \mbox{\ \ within cuts} \\ 
 0 &\mbox{\ \ else.} \end{cases}
 \end{equation*}
+A pertinent example would be that for a 'stellar halo study' $S_{cut}(y)$ limits the analysis to, say, blue-ish (BP$\_$RP$<1$) stars of $13.5<G<17.5$ at high Galactic latitudes, away from Globular clusters and the Magellanic Clouds. Then the assumption that the small sub-sample is nearly complete within the stated $S_{cut}(y)$  is defensible.
+%}
+
 The third regime is that one can analyze the distribution of quantities in $p(y_{other})$, or $p(y_{other}~|~y_s)$: the most obvious case is to analyze the 3D kinematic in the Solar neighbourhood. The last regime is of course, that the selection function $S_C(y_s)$ has been ``properly'' determined and included in the modelling [REF]; however this has only happened to date for very small sub-regimes of the space spanned by $y_s$ in the Gaia catalog.
 
 
-\textbf{It is the comprehensive construction of this (approximate) selection function, $S_C(y_s)$, that is at the heart of this proposal.} As we now sketch with a few examples, without its robust and precise knowledge it is impossible to extrapolate from \textit{statements about the objects in a catalogue} into \textit{insights in fundamental physics and astrophysics}.
+\textbf{It is the comprehensive construction of this (approximate) selection function, $S_C(y_s)$, that is at the heart of this proposal.} As we now sketch with a few examples, without its robust and precise knowledge it is impossible to extrapolate from \textit{statements about the objects' population in a catalog} into \textit{insights in fundamental physics and astrophysics}.
 
+\subsubsection{Highlight Gaia Science that cannot be done without a Good Selection-Function}
+We now proceed to highlight a few science cases central to Gaia's scientific success that absolutely require a well-determined selection function to be feasible\footnote{By 'feasible' in this context we mean: able to address a science question with 
+    a quantitative understanding of the dominant source of systematic uncertainty; and not falling short by more than an order-of-magnitude of the full pertinent information content of the Gaia catalog.}
+\\
+\noindent\textbf{A) 3D Mapping of the Milky Way}
 
+Creating an unprecedented, large-scale 3D map of our Galaxy is arguably the central seminal goal of the Gaia mission, at the heart of setting the fundamental parallax precision science requirements. Yet, to date, no large-scale map of the stellar density (most of which is in the Galactic disk) has emerged. This is because 
+such a density map is not merely the combination of the (catalogued) stars distribution $\{y_s\}$, in position, magnitude and color with distances, e.g. from parallaxes. Linking $\{y_s\}$ to $\rho_*(X,Y,Z)$ requires modelling the 3D dust distribution (there are large, coherent efforts underway to do this) and of $S_C(y_s)$. The selection function is so central here, as the quantities to be modelled, are exactly the quantities $y_s$ on which the selection depends!
 
-A selection function quantifies how the objects in an astronomical catalogue were chosen from the countless asteroids, planets, stars and galaxies in the Universe. Without the selection function,
-%we can only make state
-%Without a selection function,
-it is impossible to extrapolate from \textit{statements about the objects in a catalogue} into \textit{insights in fundamental physics}. 
+% A selection function quantifies how the objects in an astronomical catalogue were chosen from the countless asteroids, planets, stars and galaxies in the Universe. Without the selection function,
+% %we can only make state
+% %Without a selection function,
+% it is impossible to extrapolate from \textit{statements about the objects in a catalogue} into \textit{insights in fundamental physics}. 
 
-The selection function is necessary in order to draw conclusions about fundamental physics from the limited and biased fraction of objects in our catalogues. Without a selection function, we could only make statements about the objects in our catalogues.
+% The selection function is necessary in order to draw conclusions about fundamental physics from the limited and biased fraction of objects in our catalogues. Without a selection function, we could only make statements about the objects in our catalogues.
 
-The selection function can be calculated for any hypothetical object, returning one if that object would have been included in the catalogue and zero if not. The selection function can also take values between zero and one, in which case we interpret the selection function as giving the probability that the object would appear in the catalogue.
+% The selection function can be calculated \By{MF}{should be calculable?} for any hypothetical object, returning one if that object would have been included in the catalogue and zero if not. The selection function can also take values between zero and one, in which case we interpret the selection function as giving the probability that the object would appear in the catalogue.
 
-The Gaia selection function is hard.
+% The Gaia selection function is hard.
 
 
 
@@ -268,7 +289,7 @@ The links to ESA and DPAC are a natural element in this proposal because of the 
 \begin{figure}[t]
     \centering
     \includegraphics[height=8cm]{pgm_ideal_gsf.pdf}
-    \caption{Idealized Gaia selection function. Here it is assumed that the S/C exactly follows the scan law as commanded from ground without any interruptions. The on-board decision on whether or not a source is observed is dependent only on the $G$ and $G_\mathrm{RVS}$ magnitudes of the source and the corresponding fixed survey limits. See text for a more detailed explanation.}
+    \caption{Idealized Gaia selection function. Here it is assumed that the spacecraft exactly follows the scan law as commanded from ground without any interruptions. The on-board decision on whether or not a source is observed is dependent only on the $G$ and $G_\mathrm{RVS}$ magnitudes of the source and the corresponding fixed survey limits. See text for a more detailed explanation.}
     \label{fig:gsf_ideal}
 \end{figure}
 
@@ -291,7 +312,7 @@ The Gaia selection function in an ideal world would look like the probabilistic 
     \label{fig:gsf_realistic}
 \end{figure}
 
-In reality the Gaia survey selection function is vastly more complicated owing to the many stages in between source detection and final data product at which decisions are made on whether or not to make a certain observation or include it in the data processing. This is illustrated in \figref{fig:gsf_realistic}. The left hand side of the diagram shows the many decisions that are taken on-board the spacecraft which affect whether or not for a given source, passing through the field of view of one of the telescopes, measurements are actually collected.
+In reality the Gaia survey selection function is vastly more complicated owing to the many stages in between source detection and final data product at which decisions are made on the spacecraft whether or not to make a certain observation, and in the on-ground data processing whether or not to include that observation. This is illustrated in \figref{fig:gsf_realistic}. The left hand side of the diagram shows the many decisions that are taken on-board the spacecraft which affect whether or not for a given source, passing through the field of view of one of the telescopes, measurements are actually collected.
 \begin{itemize}
     \item The actual sky-scanning strategy executed by Gaia will differ from the desired one due to imperfections in the attitude control and interruptions of observations due to outages such as station keeping manoeuvres or on-board activities that require interrupting the measurement process (e.g., decontamination through heating of the payload, refocusing of the telescopes, more details can be found in \cite{2016A&A...595A...1G}).
     \item At the detection stage the brightness of the sources is estimated (with some uncertainty), and an attempt is done to weed out spurious detections due to cosmic rays of PSF spikes, and sources are prioritized in order to deal with the limitation on the amount of sources that can be handled at any one time.
@@ -303,13 +324,13 @@ In reality the Gaia survey selection function is vastly more complicated owing t
 The left hand side of \figref{fig:gsf_realistic} shows a strongly simplified representation of further decisions taken along the DPAC pipelines on whether or not to process certain sources or parts of their data.
 \begin{itemize}
     \item As a first step in the processing sources are classified as real or spurious, where the latter are typically caused by bright star PSF spikes or stray light features. Sources classified as spurious are `blacklisted' and subsequently not considered for processing. This classification process is imperfect.
-    \item The next step is to group observations of the same source together and produce the so-called `source list'. This is a table linking a given source to all its observations. This process is redone from scratch for each data release and is subject to errors, such as observations being assigned to the wrong source, or the observations of one sources being assigned to multiple different sources. Especially crowded regions will suffer from observation to source matching uncertainties which in turn will affect the selection function.
+    \item The next step is to group observations of the same source together and produce the so-called `source list'. This is a table linking a given source to all its observations. This process is redone from scratch for each data release and is subject to errors, such as observations being assigned to the wrong source, or the observations of one sources being assigned to multiple different sources. Two examples of specific challenges for the creation of the source list are crowded regions, where the source density on the sky can lead to observation to source matching uncertainties, and variable stars, where a strongly varying apparent brightness can confuse the matching process.
     \item Once the source list is created all subsequent processing steps are taken, from generating the astrometry, photometry, and radial velocity data, to the astrophysical characterization of sources, to the publication of a Gaia data release. At each step further decisions are taken on including or not sources or parts of their data. Often these decisions are explicitly or implicitly dependent on the source astrophysical parameters which will introduce further source brightness and colour dependencies into the selection function.
 \end{itemize}
 
 From the description above it is clear that the Gaia survey selection function is very complex and depending on the particular science case being addressed with Gaia data, the selection function must be known in great detail. An example is the list of binaries to be produced on the basis of Gaia data. The list will consist of various solution types (varying from mere indications of binarity to complete orbit solutions) which will be derived only for sources for which there is sufficient evidence that they are not single stars. The resulting list will thus be incomplete in a way that intricately depends on the binary star parameters, with many binaries still hiding among the sources not examined in detail in the DPAC pipeline.
 
-The objective of this proposal is to derive a detailed description of the Gaia selection function which will be provided to and used by the scientific community. This will be done through the following tasks which map to the work packages listed in \secref{sec:work-plan}.
+The objective of this proposal is to derive a detailed description of the Gaia selection function which will be provided to and used by the scientific community. This will be done through the following tasks which map to the work packages listed in \secref{sec:work-plan} (the management task, work package \ref{wp:management}, is discussed in \secref{sec:management}).
 
 \begin{description}
     \item[Operational definition of the Gaia survey selection function.] To guide the overall effort on the Gaia selection function it is important to precisely define what we mean by a selection function. We choose to take a probabilistic approach, thus asking the question: what is the probability of source X appearing in sub-sample Y of the Gaia catalogue? The mathematical formulation should at the top level be applicable to any astronomical survey but detailed mathematical definitions tailored to the Gaia survey may be needed. The formulation should account for the multiple layers of selection described above and allow for incomplete information on the data collection process. The formulation should also make it possible to accommodate additional user imposed selections (such as studying only sources with certain astrophysical parameters or demanding a minimum precision on the data used). A hierarchical probabilistic formulation is a natural choice but other approaches are not excluded. This task corresponds to work package \ref{wp:selfundefinition} and should be completed within the first six months of this project.
