@@ -124,12 +124,12 @@ Each of the above examples complicates the Gaia survey selection function which 
 %
 %\By{HWR}{putting meat on the subsequent section, drawing on a Hogg\&Rix2020 in prep paper on 'selection functions'}
 
-For any `statistical' study using a catalog, any study where it matters quantitatively how common or rare a certain type of object or circumstance is, the selection function of a catalog is arguably as important as the catalog itself. The catalog \textit{selection function}, $S_C(y)$, is a function of the observable (and thereby underlying physical) properties, $y$, of any astronomical objects; and it specifies the probability that an object of properties $y$ will enter the (Gaia) catalog. A generic and central way of learning from any catalog, is to envision a set of physical or mathematical models $\lambda_0(z\given\theta)$ -- that predicts the
+For any `statistical' study using a catalog, for any study where it matters quantitatively how common or rare a certain type of object or circumstance is, the selection function of a catalog is arguably as important as the catalog itself. The catalog \textit{selection function}, $S_C(y)$, is a function of the observable (and thereby underlying physical) properties, $y$, of any astronomical objects; and it specifies the probability that an object of properties $y$ will enter the (Gaia) catalog. A generic and central way of learning from any catalog, is to envision a set of physical or mathematical models $\lambda_0(z\given\theta)$ -- that predicts the
 distribution of true quantities $z$, given a set of model parameters $\theta$ -- and then ask
 what the `data' (the catalog entries) $\lambda_C(y)$ tell us about the relative plausibility. 
 The relation between these quantities is generically
 \begin{equation}
-\lambda_C(y\given\theta) = S_C(y)\,\int\lambda_0(z\given\theta)\,p(y\given z)\,dz,
+\lambda_C(y\given\theta) = S_C(y)\,\int p(y\given z)\,\lambda_0(z\given\theta)\,{\textrm{d}} z,
 \label{eqn:selfunc_definition}
 \end{equation}
 where $z$ is the vector of true values (\emph{vs.} the observed values $y$).
