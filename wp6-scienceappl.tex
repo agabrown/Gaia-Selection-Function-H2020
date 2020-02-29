@@ -1,6 +1,6 @@
 \begin{workpackage}{Science applications}
   \label{wp:scienceappl}
-  \wpstart{7} %Starting Month
+  \wpstart{1} %Starting Month
   \wpend{\duration} %End Month
   \wptype{RTD} %RTD, DEM, MGT, or OTHER
   \wplead{INAF}
@@ -15,7 +15,7 @@
 
   % Work Package Objectives
   \begin{wpobjectives}
-    The objective of this work package is to apply the Gaia selection function to four science cases. This serves to test the Gaia selection function implementation, to provide the community with worked examples of how to use the Gaia selection function, and to motivate the researchers involved in CoG and ensure that they have a scientific publication to enhance their prospects for future jobs in academia. The four science cases are:
+    The objective of this work package is to apply the Gaia selection function to four science cases. This serves to test the Gaia selection function implementation, to provide the community with worked examples of how to use the Gaia selection function, and to motivate the researchers involved in {\acro} and ensure that they have a scientific publication to enhance their prospects for future jobs in academia. The four science cases are:
     \begin{enumerate}
       \item Science application A. Provide a brief motivation and expected results.
       \item Science application B\ldots
@@ -30,25 +30,35 @@
     % Divide work package into multiple tasks.
     % Use \wptask command
     % syntax: \wptask{leader}{contributors}{start-m}{end-m}{title}{description}   
-    \wptask{INAF}{All other}{1}{\duration}{Scientific coordination.}{
+    \wptask{INAF}{INAF}{1}{\duration}{Scientific coordination.}{
       \label{task:wp6coordination}
-      Coordination of the efforts on the science applications of the Gaia selection function. \memo{Say a bit more about why this is needed.}
+      Coordination of the efforts on the science applications of the Gaia selection function. This includes monitoring the progress of the scientific papers, organizing the necessary meetings to discuss the paper contents, ensuring that the papers expose the use of the main elements of the tools developed in {\acro}.
+      
+      \textsf{2 INAF \pems}
     }
-    \wptask{ULEI}{All other}{7}{\duration}{Science application A.}{
+    \wptask{ULEI}{ULEI, MONA}{7}{\duration}{Science application A.}{
       \label{task:wp6sciA}
       Carry out the research related to science application A and write a paper for a peer-reviewed journal.
+      
+      \textsf{13 ULEI + 1 MONA \pems}
     }
-    \wptask{MPIA}{All other}{7}{\duration}{Science application B.}{
+    \wptask{MPIA}{MPIA, NYU}{7}{\duration}{Science application B.}{
       \label{task:wp6sciB}
       Carry out the research related to science application B and write a paper for a peer-reviewed journal.
+      
+      \textsf{13 MPIA + 1 NYU \pems}
     }
-    \wptask{INAF}{All other}{7}{\duration}{Science application C.}{
+    \wptask{INAF}{INAF}{7}{\duration}{Science application C.}{
       \label{task:wp6sciC}
       Carry out the research related to science application C and write a paper for a peer-reviewed journal.
+      
+      \textsf{13 INAF \pems}
     }
-    \wptask{UCAM}{All other}{7}{\duration}{Science application C.}{
+    \wptask{UCAM}{UCAM}{7}{\duration}{Science application C.}{
       \label{task:wp6sciD}
       Carry out the research related to science application C and write a paper for a peer-reviewed journal.
+      
+      \textsf{13 UCAM \pems}
     }
 
     \paragraph{Role of partners}
@@ -57,8 +67,9 @@
       \item[MPIA] will lead Task~\ref{task:wp6sciB}.
       \item[INAF] will lead Task~\ref{task:wp6sciC}.
       \item[UCAM] will lead Task~\ref{task:wp6sciD}.
-      \item[All other partners] will contribute to tasks \ref{task:wp6sciA}--\ref{task:wp6sciD}.
+      \item[All partners] will contribute to each of the tasks \ref{task:wp6sciA}--\ref{task:wp6sciD}.
     \end{description}
+    The researchers funded through {\acro} are expected to do the bulk of the scientific analysis for the tasks above, supported by local supervision.
   \end{wpdescription}
 
   % Work Package Deliverable

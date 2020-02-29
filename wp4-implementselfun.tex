@@ -1,12 +1,12 @@
 \begin{workpackage}{Practical implementation and dissemination of the Gaia selection function}
   \label{wp:selfunimplementation}
-  \wpstart{7} %Starting Month
+  \wpstart{1} %Starting Month
   \wpend{\duration} %End Month
   \wptype{RTD} %RTD, DEM, MGT, or OTHER
   \wplead{ULEI}
   \personmonths*{ULEI}{23}
-  \personmonths{MPIA}{9}
-  \personmonths{INAF}{3}
+  \personmonths{MPIA}{12}
+  \personmonths{INAF}{6}
   \personmonths{UCAM}{2}
   \personmonths{NYU}{2}
   \personmonths{MONA}{1}
@@ -35,19 +35,27 @@
     % syntax: \wptask{leader}{contributors}{start-m}{end-m}{title}{description}
     \wptask{ULEI}{ULEI}{1}{\duration}{Scientific coordination}{
       \label{task:wp4coordination}
-      Scientific coordination of the implementation and dissemination of the Gaia survey selection function. This includes setting up the code hosting and interfacing with ESA/DPAC on hosting the numerical data for the selection function in the Gaia archive. The organization of the dissemination activities and creation of the {\acro} web-portal are also part of this task (3 ULEI person-months).
+      Scientific coordination of the implementation and dissemination of the Gaia survey selection function. This includes setting up the code hosting and interfacing with ESA/DPAC on hosting the numerical data for the selection function in the Gaia archive. The organization of the dissemination activities and creation of the {\acro} web-portal are also part of this task.
+      
+      \textsf{3 ULEI \pems}
     }
     \wptask{ULEI}{NYU}{7}{\duration}{Implementation}{
       \label{task:wp4implement}
-      Implement the Gaia selection functions in terms of open source software tools and associated numerical data. Test the implementation through applications to science cases. Port the implementation to the relevant code hosting site and transfer the numerical data to the ESA Gaia archive. To ensure the long term curation it is important to embed the {\acro} tools in an existing stable eco-system. Astropy is an excellent candidate and in this task we will also include the effort to integrate the {\acro} tools therein, relying on the expertise from NYU (15 ULEI + 2 NYU person-months).
+      Implement the Gaia selection functions in terms of open source software tools and associated numerical data. Test the implementation through applications to science cases. Port the implementation to the relevant code hosting site and transfer the numerical data to the ESA Gaia archive. To ensure the long term curation it is important to embed the {\acro} tools in an existing stable eco-system. Astropy is an excellent candidate and in this task we will also include the effort to integrate the {\acro} tools therein, relying on the expertise from NYU.
+      
+      \textsf{14 ULEI + 2 NYU \pems}
     }    
     \wptask{MPIA}{MONA}{7}{\duration}{Implementation of tools to include user selections}{
       \label{task:wp4layers}
-      Develop and implement tools to chain together the Gaia survey selection function with additional user imposed selection on the Gaia archive data. The tools should produce an overall effective selection function for the user-selected sample (9 MPIA + 1 MONA person-months).
+      Develop and implement tools to chain together the Gaia survey selection function with additional user imposed selection on the Gaia archive data. The tools should produce an overall effective selection function for the user-selected sample.
+      
+      \textsf{9 MPIA + 1 MONA \pems}
     }
     \wptask{INAF}{UCAM, ULEI}{7}{\duration}{Implementation of tools for combined selection functions}{
       \label{task:wp4combine}
-      Implement the selection functions for combinations of Gaia and other surveys based on the methodology developed in work package \ref{wp:selfuncombine}. This effort will focus on the combination of Gaia and the surveys mentioned in \ref{task:wp5examples}. In particular for the Galah survey an extended visit by the ULEI researcher to MONA is foreseen in order to profit from the access to Galah data and the spectroscopic survey expertise (3 INAF + 2 UCAM + 5 ULEI person months).
+      Implement the selection functions for combinations of Gaia and other surveys based on the methodology developed in work package \ref{wp:selfuncombine}. This effort will focus on the combination of Gaia and the two surveys mentioned in \ref{task:wp5examples}. In particular for the Galah survey an extended visit by the ULEI researcher to MONA is foreseen in order to profit from the access to Galah data and the spectroscopic survey expertise.
+      
+      \textsf{3 MPIA + 6 INAF + 2 UCAM + 6 ULEI \pems}
     }
 
     \paragraph{Role of partners}
@@ -63,9 +71,9 @@
   % Work Package Deliverable
   \begin{wpdeliverables}
     % \wpdeliverable[date]{R}{PU}{A report on \ldots}
-    \wpdeliverable[20]{ULEI}{DEM}{PU}{Prototype V1 of open source and open data implementation of Gaia selection function.}\label{dev:wp4prototypev1}
-    \wpdeliverable[31]{ULEI}{DEM}{PU}{Prototype V2 of open source and open data implementation of Gaia selection function.}\label{dev:wp4prototypev2}
-    \wpdeliverable[\duration]{ULEI}{DEC}{PU}{Open source and open data implementation of Gaia selection function.}\label{dev:wp4final}
+    \wpdeliverable[20]{ULEI}{DEM}{PU}{Prototype V1: open source and open data implementation of the Gaia selection function.}\label{dev:wp4prototypev1}
+    \wpdeliverable[31]{ULEI}{DEM}{PU}{Prototype V2: open source and open data implementation of the Gaia selection function and selections functions for combinations of Gaia and other surveys.}\label{dev:wp4prototypev2}
+    \wpdeliverable[\duration]{ULEI}{DEC}{PU}{Open source and open data implementation of the Gaia selection function and selections functions for combinations of Gaia and other surveys.}\label{dev:wp4final}
   \end{wpdeliverables}
 
 \end{workpackage}

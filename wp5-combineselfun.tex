@@ -1,12 +1,12 @@
 \begin{workpackage}{Selection function for combinations of Gaia and other surveys}
   \label{wp:selfuncombine}
-  \wpstart{7} %Starting Month
+  \wpstart{1} %Starting Month
   \wpend{\duration} %End Month
   \wptype{RTD} %RTD, DEM, MGT, or OTHER
   \wplead{MPIA}
   \personmonths{ULEI}{2}
-  \personmonths*{MPIA}{24}
-  \personmonths{INAF}{12}
+  \personmonths*{MPIA}{21}
+  \personmonths{INAF}{9}
   \personmonths{UCAM}{7}
   \personmonths{NYU}{2}
   \personmonths{MONA}{2}
@@ -15,10 +15,10 @@
 
   % Work Package Objectives
   \begin{wpobjectives}
-    The objective of this work package is to research and develop methods to derive selection functions for the combination of Gaia and other large sky surveys. A concrete implementation for a few cases will be implemented in work package \ref{wp:selfunimplementation}. The detailed objectives are
+    The objective of this work package is to research and develop methods to derive selection functions for the combination of Gaia and other large sky surveys. Within the lifetime of the project it is not realistic to make combinations of Gaia and an arbitrary numbers of other surveys. Hence the concrete implementation will focus on two selected cases which are to be implemented in work package \ref{wp:selfunimplementation}. The detailed objectives are
     \begin{enumerate}
       \item Research and develop a generic method for constructing selection functions for combinations of surveys.
-      \item Apply this method to a few concrete cases of the combination of Gaia with another survey.
+      \item Apply this method to a selected number of cases of the combination of Gaia with another survey. We will focus our efforts on one example each of a combination of Gaia with a photometric and a spectroscopic sky survey.
     \end{enumerate}
   \end{wpobjectives}
 
@@ -27,20 +27,25 @@
     % Divide work package into multiple tasks.
     % Use \wptask command
     % syntax: \wptask{leader}{contributors}{start-m}{end-m}{title}{description}   
-    \wptask{MPIA}{All other}{1}{\duration}{Scientific coordination.}{
+    \wptask{MPIA}{MPIA}{1}{\duration}{Scientific coordination.}{
       \label{task:wp5coordination}
-      Scientific coordination of the research and development of the combined selection function and coordination of writing the paper corresponding to deliverable \ref{dev:wp5finalreport}.
+      Scientific coordination of the research and development of the combined selection function and coordination of writing the paper corresponding to deliverable \ref{dev:wp5finalreport}. This includes planning the work to be done, assigning sub-tasks and organizing the necessary meetings to discuss progress. 
+      
+      \textsf{2 MPIA person months}
     }
-    \wptask{MPIA}{All other}{7}{\duration}{Generic combination method.}{
+    \wptask{MPIA}{ULEI, INAF, UCAM}{7}{\duration}{Generic combination method.}{
       \label{task:wp5method}
-      Research and develop a generic method for constructing selection functions for combinations of surveys. Provide additional practical guidance instructions for complex combination. Implementations in work package \ref{wp:selfunimplementation}
+      Research and develop a generic method for constructing selection functions for combinations of surveys. Provide documentation on the methods, including additional practical guidance instructions for complex combination. The implementation of the combination method will be done within work package \ref{wp:selfunimplementation}. 
+      
+      \textsf{9 MPIA + 1 ULEI + 6 INAF + 4 UCAM person months}
     }
     \wptask{MPIA}{All other}{7}{\duration}{Combined selection functions.}{
       \label{task:wp5examples}
-      First, applying using the method developed in task~\ref{task:wp5method} to doing an external validation of the Gaia selection function using the DECaLS survey.
-      Second, for a few selected examples construct the selection function for the combination of Gaia and another survey. In this task the following surveys to which {\acro} members have ready access will be combined with Gaia: APOGEE, SDSS, Pan-Stars, GALAH, as well as SDSS-V, WEAVE, and 4MOST. 
-      \memo{MF: I don't think we should commit to all of the above surveys. If we can implement properly for one spectro and one like DECaLS or PS1 this would be good?}
-      \memo{SDSS-V/4MOST combination based on target list of the surveys are not far enough along? MF: 4MOST's preliminary list is done; WEAVE is for September.}
+      First, applying using the method developed in task~\ref{task:wp5method} to an external validation of the Gaia selection function using the DECaLS survey. Second, construct the selection function for the combination of Gaia and another survey. The focus will be on one photometric sky survey that {\acro} team members know well, i.e.\ the Pan-Starss PS1 release, and on one spectroscopic survey. For the latter we choose Galah as an example of a recent survey which is already well underway and to which {\acro} partner MONA has access along with the necessary expertise. Note that this task also include matching the source list of Gaia to that of the other surveys. Doing this carefully is needed in order to keep the combined selection function tractable and thus a significant effort is implied. 
+      
+      \textsf{10 MPIA + 1 ULEI + 3 INAF + 3 UCAM + 2 MONA + 2 NYU person months}
+      
+      \memo{AB: I agree with Morgan's comments that we should be modest in what we promise here. Galah is included because it is scientifically very interesting and also because of the planned extended trip to MONA. I am happy to focus on another photometric survey, but PS1 makes sense as MPIA has experience with that and it shows ambition in using a survey from a full hemisphere.}
     }    
 
     \paragraph{Role of partners}
