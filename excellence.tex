@@ -25,14 +25,14 @@ first direct observational evidence of crystallization in the interiors of white
 when a collision with a dwarf galaxy took place which contributed to the build-up of the Milky Way's stellar halo and
 thick disk \cite{2018Natur.563...85H, 2018MNRAS.478..611B, 2019arXiv190904679B}. 
 
-\By{HWR}{But with numerous exciting results that are starting to transform many different fields of astrophysics,
+But while numerous exciting results that are starting to transform many different fields of astrophysics,
 it remains true that most of these to date have focused on `low hanging fruit' in the Gaia data archive, and barely scratched the surface of the Gaia data information content. 
 Specifically, almost all analyses to date have exploited the astounding Gaia data precision and accuracy
-on all the individual objects, but have side-stepped performing or exploiting the \textsl{statistical distribution of objects with certain properties}, i.e. population studies. For example, a result as elementary as a good determination of the Milky Way's radial profile of disk stars -- by simply counting them as a function of their position -- has yet to be carried out.  This is because such studies inevitably require knowledge of the ``selection function'': what is the probability that an object of certain physical properties at a certain position in space would be catalogued by Gaia? This knowledge is indispensable for any population study of objects; and population studies are the very core of the Gaia mission, with its billions-of-objects catalog. \\
+on all the individual objects, but have side-stepped performing or exploiting the \textsl{statistical distribution of objects with certain properties}, i.e. population studies. For example, a result as elementary as a good determination of the Milky Way's radial profile of disk stars -- by simply counting them as a function of their position -- has yet to be carried out.  This is because such studies inevitably require knowledge of the ``selection function'': what is the probability that an object of certain physical properties at a certain position in space would be catalogued by Gaia? This knowledge is indispensable for any population study of objects; and population studies are the very core of the Gaia mission, with its billions-of-objects catalogue. \\
 In practice the community so far has often resorted to drastic cuts, on object properties and Gaia data quality flags, to arrive at samples whose selection function is very simple (avoiding for example the well known problems associated with the estimation of distance as the inverse of the parallax \cite{2018A&A...616A...9L}). Yet, such analyses grossly under-exploit the information content of the Gaia data set, often by orders of magnitude. \\
 Consequently, many high-profile science cases for which Gaia was
-built cannot be realized, because the selection function of the Gaia survey is not known, neither to the Gaia DPAC team, not to the community. When  combined with the some additional data cuts, this leads to
-unrepresentative samples. It is the single goal of this proposal to remedy this shortcoming and dramatically boost (yes, yet further!) the astrophysical utility of the Gaia mission.}
+built cannot be realized, because the selection function of the Gaia survey is not known, neither to the Gaia DPAC team, nor to the community. When  combined with the some additional data cuts, this leads to
+unrepresentative samples. It is the single goal of this proposal to remedy this shortcoming and dramatically boost (yes, yet further!) the astrophysical utility of the Gaia mission.
 
 The Gaia selection function is a highly non-trivial combination of the on-board selection of sources, telemetry
 losses, selections on data quality during 
@@ -49,48 +49,23 @@ scientific community in the form of numerical tables and source code that allow 
 their scientific analyses and thus maximize the outcome thereof. In detail the objectives are:
 
 \begin{enumerate}
-    \item Develop a detailed mathematical formulation of a survey selection function, where the goal is to keep this
-        as general as possible even if in this project the focus is on the Gaia survey. The formulation should account
-        for the layering of user imposed sample selections on top of the survey selection function.
-    \item Provide a detailed practical implementation of the Gaia selection function in the form of auxiliary data,
-        which will be accessible through the ESA Science Data Centre, and open source tools which will be made available through
-        code hosting websites. %\By{ARC}{And generalised selection function tools integrated into astropy?} 
-    \item Develop tools to incorporate the selection function in scientific analyses. These tools should allow for
-        combining the Gaia survey selection function with user imposed sample restrictions. The tools will be made
-        available as open source code through code hosting websites.
-    \item Apply the selection function tools to example science cases. This will serve to demonstrate the benefits of
-        carefully accounting for the selection function and at the same time provide worked examples to the community of
-        prospective users of these tools.
+    \item Develop a detailed mathematical formulation of a survey selection function, where the goal is to keep this as general as possible even if in this project the focus is on the Gaia survey. The formulation should account for the layering of user imposed sample selections on top of the survey selection function and allow for a description of the selection function of combinations of surveys.
+    \item Research and develop a detailed description and modelling of the Gaia survey selection function and do the same for the combination of Gaia and other surveys. The results will set the requirements for the next two items.
+    \item Provide a detailed practical implementation of the Gaia selection function in the form of auxiliary data, which will be accessible through the ESA Science Data Centre, and open source tools which will be made available through code hosting websites. 
+    \item Develop tools to incorporate the selection function in scientific analyses. These tools should allow for combining the Gaia survey selection function with user imposed sample restrictions and for combining Gaia with other surveys. The tools will be made available as open source code through code hosting websites.
+    \item Apply the selection function tools to example science cases. This will serve to demonstrate the benefits of carefully accounting for the selection function and at the same time provide worked examples to the community of prospective users of these tools.
 \end{enumerate}
+
+The long term curation of the results will be ensured through the availability of the auxiliary data through the ESA Gaia archive and by source code for the uers tools being embedded in or affilated to the Astropy project.
 
 \subsection{Context}
 \label{sec:context}
 
-ESA's Gaia mission \cite{2016A&A...595A...1G} represents a European breakthrough in astrophysics, a cornerstone
-mission which was launched in 2013 aimed at producing the most accurate 3D map of the Milky Way to date. The resulting
-stereoscopic census of our Galaxy represents a giant leap in astrometric accuracy (reaching the 10--20 micro-arcsecond
-regime, which is equivalent to knowing the 3D positions of stars to 10 per cent precision over distances as large as $20\,000$ to $30\,000$ lightyears) complemented by the only full sky homogeneous photometric survey with an angular resolution comparable to that
-of the Hubble Space Telescope, as well as the largest spectroscopic survey ever undertaken. 
+ESA's Gaia mission \cite{2016A&A...595A...1G} represents a European breakthrough in astrophysics, a cornerstone mission which was launched in 2013 aimed at producing the most accurate 3D map of the Milky Way to date. The resulting stereoscopic census of our Galaxy represents a giant leap in astrometric accuracy (reaching the 10--20 micro-arcsecond regime, which is equivalent to knowing the 3D positions of stars to 10 per cent precision over distances as large as $20\,000$ to $30\,000$ lightyears) complemented by the only full sky homogeneous photometric survey with an angular resolution comparable to that of the Hubble Space Telescope, as well as the largest spectroscopic survey ever undertaken. 
 
-The primary scientific aim of the mission is to map the structure of our Galaxy and unravel its formation history and
-subsequent evolution. Current cosmological models envisage the formation of large galaxies through the merging of
-smaller structures. Deciphering the assembly history of our Galaxy requires a detailed mapping of the structure,
-dynamics, chemical composition, and age distribution of its stellar populations. Ideally one would like to `tag'
-individual stars to each of the progenitor building blocks of the Galaxy \cite{2002ARA&A..40..487F}. The Gaia mission is
-designed to provide the required fundamental data in the form of distances (through parallaxes), space velocities
-(through proper motions and radial velocities) and astrophysical characterisation (through multi-colour photometry) for
-massive numbers of stars throughout most of the Galaxy. It should be stressed however that Gaia is not simply a `Milky
-Way mission' but is truly a multi-faceted {\em astrophysics mission} which will provide exciting scientific results
-covering many topics including: fundamental stellar physics across the Hertzsprung-Russell diagram, the characterisation of
-tens of millions of binary stars, unique samples of variable stars of nearly all types (including key cosmological
-distance calibrators), detection and orbital classification of thousands of extra-solar planetary systems, a
-comprehensive survey of objects ranging from huge numbers of minor bodies in our Solar System, through galaxies in the
-nearby Universe, to over a million distant quasars. Gaia will also provide a number of stringent tests of general
-relativity. Last but not least, a massive survey such as Gaia will uncover many surprises that the Universe still holds
-in store for us.
+The primary scientific aim of the mission is to map the structure of our Galaxy and unravel its formation history and subsequent evolution. Current cosmological models envisage the formation of large galaxies through the merging of smaller structures. Deciphering the assembly history of our Galaxy requires a detailed mapping of the structure, dynamics, chemical composition, and age distribution of its stellar populations. Ideally one would like to `tag' individual stars to each of the progenitor building blocks of the Galaxy \cite{2002ARA&A..40..487F}. The Gaia mission is designed to provide the required fundamental data in the form of distances (through parallaxes), space velocities (through proper motions and radial velocities) and astrophysical characterisation (through multi-colour photometry) for massive numbers of stars throughout most of the Galaxy. It should be stressed however that Gaia is not simply a `Milky Way mission' but is truly a multi-faceted {\em astrophysics mission} which will provide exciting scientific results covering many topics including: fundamental stellar physics across the Hertzsprung-Russell diagram, the characterisation of tens of millions of binary stars, unique samples of variable stars of nearly all types (including key cosmological distance calibrators), detection and orbital classification of thousands of exo-planetary systems, a comprehensive survey of objects ranging from huge numbers of minor bodies in our Solar System, through galaxies in the nearby Universe, to over a million distant quasars. Gaia will also provide a number of stringent tests of general relativity. Last but not least, a massive survey such as Gaia will uncover many surprises that the Universe still holds in store for us.
 
-The data processing for the Gaia mission is carried out by a European consortium of institutes and funding agencies, the Data Processing and Analysis Consortium (DPAC). The task of the DPAC is to turn the raw telemetry from Gaia into data products ready for use by astronomers and scientists around the world. The data products are both the basic astrometric, photometric, and spectroscopic results as well as advanced data products, such as the astrophysical characterization of stars, derived from the former. Through an independent unit within the consortium the DPAC also ensures the quality of the published data through extensive technical and scientific validation. The publicly released data, which are disseminated through the ESA Science Data Center and its partners,
-are accompanied by extensive documentation which is also produced by DPAC. It should be stressed here that the DPAC holds no proprietary rights to the data which means that once the data products are validated and documented they are released publicly and world-wide without delay. In this sense Gaia represents a uniquely open survey concept.
+The data processing for the Gaia mission is carried out by a European consortium of institutes and funding agencies, the Data Processing and Analysis Consortium (DPAC). The task of the DPAC is to turn the raw telemetry from Gaia into data products ready for use by astronomers and scientists around the world. The data products are both the basic astrometric, photometric, and spectroscopic results as well as advanced data products, such as the astrophysical characterization of stars, derived from the former. Through an independent unit within the consortium the DPAC also ensures the quality of the published data through extensive technical and scientific validation. The publicly released data, which are disseminated through the ESA Science Data Center and its partners, are accompanied by extensive documentation which is also produced by DPAC. It should be stressed here that the DPAC holds no proprietary rights to the data which means that once the data products are validated and documented they are released publicly and world-wide without delay. In this sense Gaia represents a uniquely open survey concept.
 
 From the early days of the Gaia mission it was foreseen to have incremental data releases based on increasing amounts of collected telemetry. The various data products would be released in stages (where, for example, some of the advanced data products such as exoplanet catalogues can only be released after sufficient data has been collected and the various astrometric calibrations have reached the required levels of precision) and with increasing accuracy for each release. To date two data releases have taken place, Gaia DR1 in September 2016 and Gaia DR2 in April 2018. Both releases have been highly successful and have had major impacts on the fields of Galactic archaeology; Milky Way mass estimation; stellar streams, dwarf galaxies, globular clusters; open clusters; white dwarfs; the characterization of exoplanet host stars and determining the absolute sizes of protoplanetary disks, to name a number of prominent examples. The studies of individual stars and stellar systems benefit immensely from the now easily available high precision parallax data.
 
