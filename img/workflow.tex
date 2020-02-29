@@ -2,7 +2,7 @@
 %
 % TeX file workflow.tex
 % Uses: tikz package
-% Last Updated:  2020.02.27
+% Last Updated:  2020.02.29
 % First Created: 2020.02.25
 %
 % Title: CoG workflow.
@@ -11,17 +11,15 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass{article}
+\documentclass[a4paper, landscape]{article}
 
 \usepackage{times,layouts}
 \usepackage{tikz,html,amsmath}
 \usetikzlibrary{arrows,shapes,calc}
 \usetikzlibrary{backgrounds}
+\usepackage{geometry}
+\geometry{hmargin=5pt,vmargin=5pt}
 
-\usepackage[paperwidth=145mm,paperheight=80mm,
-left=-2mm,top=3mm,bottom=0mm,right=0mm,
-noheadfoot,marginparwidth=0pt,includemp=false,
-textwidth=140mm,textheight=75mm]{geometry}
 
 \newcommand\showpage{%
 \setlayoutscale{0.5}\setlabelfont{\tiny}\printheadingsfalse\printparametersfalse
@@ -60,21 +58,21 @@ sep=3pt, text badly centered, text width=14mm, rounded corners=3pt, fill=mptab10
 \begin{document}
 \pgfdeclarelayer{background}
 \pgfsetlayers{background,main}
-\begin{tikzpicture}[font=\scriptsize, thick, node distance=0.7cm]
+\begin{tikzpicture}[font=\scriptsize, thick, node distance=0.8cm]
   \node[wp] (analysis1) at (0,0) {Research \& Development};
   \node[wp, below of=analysis1] (spec1) {Implementation requirements};
   \node[wp, below of=spec1] (implement1) {Implementation};
-  \node[prototype, right of=spec1, xshift=2.7cm] (proto1) {Prototype v1};
-  \node[usertest, below of=proto1, yshift=-0.7cm] (test1) {User testing at community workshop};
-  \node[feedback, below of=test1, yshift=-0.7cm] (feedback1) {Feedback};
+  \node[prototype, right of=spec1, xshift=2.7cm] (proto1) {Public prototype V1};
+  \node[usertest, below of=proto1, yshift=-0.9cm] (test1) {User testing at community workshop};
+  \node[feedback, below of=test1, yshift=-0.9cm] (feedback1) {Feedback};
   \node[below of=implement1] {Phase 1};
 
   \node[wp, right of=feedback1, xshift=2.7cm] (spec2) {Implementation requirements};
   \node[wp, above of=spec2] (analysis2) {Research \& Development};
   \node[wp, below of=spec2] (implement2) {Implementation};
-  \node[prototype, right of=spec2, xshift=2.7cm] (proto2) {Prototype v2};
-  \node[usertest, below of=proto2, yshift=-0.7cm] (test2) {User testing at community workshop};
-  \node[feedback, below of=test2, yshift=-0.7cm] (feedback2) {Feedback};
+  \node[prototype, right of=spec2, xshift=2.7cm] (proto2) {Public prototype V2};
+  \node[usertest, below of=proto2, yshift=-0.9cm] (test2) {User testing at community workshop};
+  \node[feedback, below of=test2, yshift=-0.9cm] (feedback2) {Feedback};
   \node[below of=implement2] {Phase 2};
 
   \draw[workflow] (analysis1.0) -- (proto1);
