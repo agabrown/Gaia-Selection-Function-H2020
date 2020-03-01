@@ -145,11 +145,38 @@ The third regime is that one can analyze the distribution of quantities in $p(y_
 \textbf{It is the comprehensive construction of this (approximate) selection function, $S_C(y_s)$, that is at the heart of this proposal.} As we now sketch with a few examples, without its robust and precise knowledge it is impossible to extrapolate from \textit{statements about the objects' population in a catalog} into \textit{insights in fundamental physics and astrophysics}.
 
 \subsubsection{Highlight Gaia Science that cannot be done without a Good Selection-Function}
-We now proceed to highlight a few science cases central to Gaia's scientific success that absolutely require a well-determined selection function to be feasible\footnote{By 'feasible' in this context we mean: able to address a science question with 
-    a quantitative understanding of the dominant source of systematic uncertainty; and not falling short by more than an order-of-magnitude of the full pertinent information content of the Gaia catalog.}
+We now proceed to highlight a few science cases central to Gaia's scientific success that absolutely require a well-determined selection function to be feasible\footnote{By `feasible' in this context we mean: able to address a science question with a quantitative understanding of the dominant source of systematic uncertainty; and not falling short by more than an order-of-magnitude of the full pertinent information content of the Gaia catalog.}.
+To illustrate the kinds of selection effects that can occur in the Gaia data we refer to figures \ref{fig:6dsample}--\ref{fig:bulge}. These figures serve also to reinforce the points made in the following text.
 \\
 
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{DR2_6DSample_Source_Counts_Ggt12.png}
+    \caption{Source density distribution on the sky (no.\ per square degree) of stars in the Gaia DR2 catalogue for which a radial velocity is listed and which are fainter than $G=12$. The sky projection is in Galactic coordinates with the Milky Way bulge in the centre of the image and the longitude increasing to the left. Note the prominent patterns of squares in the southern hemisphere on the lower right hand side of the figure. These are imprints of photographic plates on which the Guide Star Catalogue is based which was one of the surveys used to construct the Initial Gaia Source List \cite{2014A&A...570A..87S}. This list was used to bootstrap the creation of the Gaia source list (see \secref{sec:methods}). Imprints from the Sloan Digital Sky Survey spectroscopic survey can be seen as dark stripes crossing the Galactic plane on the left hand side. Although these imprints will gradually disappear in future Gaia data releases, this figure is a good illustration of the complications that can arise for selection functions of combined surveys.}
+    \label{fig:6dsample}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{SelectionEffect6DSamplePlxSnrGt10.png}
+    \caption{The fraction of stars selected from the Gaia DR2 sample for which radial velocities are listed, when demanding that the parallax is larger than 10 times its uncertainty. Note how the ecliptic pole regions on the top left and bottom right are strongly favoured, whereas the fraction of selected source drops dramatically along the Galactic plane. In addition there are oddly shaped regions with a lower fraction of selected sources. These reflect a combination of the scanning strategy followed by Gaia and filtering on data quality at various stages in the data processing.}
+    \label{fig:6dplxsnrgt10}
+\end{figure}
 \noindent\textbf{A) 3D-Mapping of the Milky Way}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\linewidth]{DR2_skyPlot_sos_RRL_inv.png}
+    \caption{The sky distribution of confirmed RR Lyrae variables in the Gaia DR2 catalogue. Note the very strong selection effects on the sky due to the combination of the scanning strategy, the constraints on the minimum number of observations for classifying variable stars, and data quality filtering in the processing pipelines. For details see \cite{2018A&A...618A..30H}.}
+    \label{fig:rrl}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics{}
+    \caption{Bulge panels.}
+    \label{fig:bulge}
+\end{figure}
 
 Creating an unprecedented, large-scale 3D map of our Galaxy is arguably the central seminal goal of the Gaia mission, at the heart of setting the fundamental parallax precision science requirements. Yet, to date, no large-scale map of the stellar density (most of which is in the Galactic disk) has emerged. This is because 
 such a density map is not merely the combination of the (catalogued) stars distribution $\{y_s\}$, in position, magnitude and color with distances, e.g. from parallaxes. Linking $\{y_s\}$ to $\rho_*(X,Y,Z)$ requires modelling the 3D dust distribution (there are large, coherent efforts underway to do this) and of $S_C(y_s)$. The selection function is so central here, as the quantities to be modelled, are exactly the quantities $y_s$ on which the selection depends!
