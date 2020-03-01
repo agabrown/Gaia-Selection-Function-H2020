@@ -16,37 +16,17 @@ realistic and achievable within the duration of the project. Objectives should b
 the expected exploitation and impact of the project (see section 2).
 }
 
-The European Space Agency's Gaia Mission \cite{2016A&A...595A...1G} is the most successful of ESA's space astronomy
-missions as measured by the publication rate of papers using its data in one form or another. Over 2500 papers appeared
-between April 2018 and February 2020 that use data from the second Gaia data release\footnote{As indicated for example by the \href{https://ui.adsabs.harvard.edu/search/q=citations(bibcode\%3A2018A\%26A...616A...1G)&sort=date\%20desc\%2C\%20bibcode\%20desc&p_=0}{citations to the Gaia DR2 release paper}}. Among the many high profile science
-results published by European groups are the discovery of a spiral in the phase space structure of the Milky Way's disk
-(\cite{2018Natur.561..360A} indicative of a recent disturbance, most likely due to the Sagittarius dwarf galaxy), the
-first direct observational evidence of crystallization in the interiors of white dwarfs \cite{2019Natur.565..202T} (confirming a fifty year old prediction), and the uncovering of a major event 10 billion years into the Milky Way's past
-when a collision with a dwarf galaxy took place which contributed to the build-up of the Milky Way's stellar halo and
-thick disk \cite{2018Natur.563...85H, 2018MNRAS.478..611B, 2019arXiv190904679B}. 
+The European Space Agency's Gaia Mission \cite{2016A&A...595A...1G} is the most successful of ESA's space astronomy missions as measured by the publication rate of papers using its data in one form or another. Over 2500 papers appeared between April 2018 and February 2020 that use data from the second Gaia data release\footnote{As indicated for example by the \href{https://ui.adsabs.harvard.edu/search/q=citations(bibcode\%3A2018A\%26A...616A...1G)&sort=date\%20desc\%2C\%20bibcode\%20desc&p_=0}{citations to the Gaia DR2 release paper}}. Among the many high profile science results published by European groups are the discovery of a spiral in the phase space structure of the Milky Way's disk (\cite{2018Natur.561..360A} indicative of a recent disturbance, most likely due to the Sagittarius dwarf galaxy), the first direct observational evidence of crystallization in the interiors of white dwarfs \cite{2019Natur.565..202T} (confirming a fifty year old prediction), and the uncovering of a major event 10 billion years into the Milky Way's past when a collision with a dwarf galaxy took place which contributed to the build-up of the Milky Way's stellar halo and thick disk \cite{2018Natur.563...85H, 2018MNRAS.478..611B, 2019arXiv190904679B}. 
 
-But while numerous exciting results that are starting to transform many different fields of astrophysics,
-it remains true that most of these to date have focused on `low hanging fruit' in the Gaia data archive, and barely scratched the surface of the Gaia data information content. 
-Specifically, almost all analyses to date have exploited the astounding Gaia data precision and accuracy
-on all the individual objects, but have side-stepped performing or exploiting the \textsl{statistical distribution of objects with certain properties}, i.e. population studies. For example, a result as elementary as a good determination of the Milky Way's radial profile of disk stars -- by simply counting them as a function of their position -- has yet to be carried out.  This is because such studies inevitably require knowledge of the ``selection function'': what is the probability that an object of certain physical properties at a certain position in space would be catalogued by Gaia? This knowledge is indispensable for any population study of objects; and population studies are the very core of the Gaia mission, with its billions-of-objects catalogue. \\
-In practice the community so far has often resorted to drastic cuts, on object properties and Gaia data quality flags, to arrive at samples whose selection function is very simple (avoiding for example the well known problems associated with the estimation of distance as the inverse of the parallax \cite{2018A&A...616A...9L}). Yet, such analyses grossly under-exploit the information content of the Gaia data set, often by orders of magnitude. \\
-Consequently, many high-profile science cases for which Gaia was
-built cannot be realized, because the selection function of the Gaia survey is not known, neither to the Gaia DPAC team, nor to the community. When  combined with the some additional data cuts, this leads to
-unrepresentative samples. It is the single goal of this proposal to remedy this shortcoming and dramatically boost (yes, yet further!) the astrophysical utility of the Gaia mission.
+But while numerous exciting results that are starting to transform many different fields of astrophysics, it remains true that most of these to date have focused on `low hanging fruit' in the Gaia data archive, and barely scratched the surface of the Gaia data information content. Specifically, almost all analyses to date have exploited the astounding Gaia data precision and accuracy on all the individual objects, but have side-stepped performing or exploiting the \textsl{statistical distribution of objects with certain properties}, i.e. population studies. For example, a result as elementary as a good determination of the Milky Way's radial profile of disk stars -- by simply counting them as a function of their position -- has yet to be carried out.  This is because such studies inevitably require knowledge of the ``selection function'': what is the probability that an object of certain physical properties at a certain position in space would be catalogued by Gaia? This knowledge is indispensible for any population study of objects; and population studies are the very core of the Gaia mission, with its billions-of-objects catalogue.
 
-The Gaia selection function is a highly non-trivial combination of the on-board selection of sources, telemetry
-losses, selections on data quality during 
-%the data 
-processing, and selections on quality before the publication of the
-processed data in the Gaia archive \memo{(show examples in the scientific motivation section below)}. As a result, the
-selection function for Gaia has only been characterized in highly simplified ways \memo{(provide literature references
-in the motivation section below)} even though it will be crucial for a full exploitation of the intrinsic science
-potential of the Gaia data, in particular also in view of the legacy value of the Gaia archive which will remain
-the standard in fundamental astrophysical data for decades to come.
+In practice the community so far has often resorted to drastic cuts, on object properties and Gaia data quality flags, to arrive at samples whose selection function is very simple (avoiding for example the well known problems associated with the estimation of distance as the inverse of the parallax \cite{2018A&A...616A...9L}). Yet, such analyses grossly under-exploit the information content of the Gaia data set, often by orders of magnitude.
 
-The objective of this proposal is to build a detailed selection function for the Gaia data and to provide this to the
-scientific community in the form of numerical tables and source code that allow users to apply the selection function to
-their scientific analyses and thus maximize the outcome thereof. In detail the objectives are:
+Consequently, many high-profile science cases for which Gaia was built cannot be realized, because the selection function of the Gaia survey is not known, neither to the Gaia DPAC team, nor to the community. When  combined with the some additional data cuts, this leads to unrepresentative samples. It is the single goal of this proposal to remedy this shortcoming and dramatically boost (yes, yet further!) the astrophysical utility of the Gaia mission.
+
+The Gaia selection function is a highly non-trivial combination of the on-board selection of sources, telemetry losses, selections on data quality during processing, and selections on quality before the publication of the processed data in the Gaia archive. As a result, the selection function for Gaia has only been characterized in highly simplified ways \memo{(provide literature references in the motivation section below)} even though it will be crucial for a full exploitation of the intrinsic science potential of the Gaia data, in particular also in view of the legacy value of the Gaia archive which will remain the standard in fundamental astrophysical data for decades to come.
+
+The objective of this proposal is to build a detailed selection function for the Gaia data and to provide this to the scientific community in the form of numerical tables and source code that allow users to apply the selection function to their scientific analyses and thus maximize the outcome thereof. In detail the objectives are:
 
 \begin{enumerate}
     \item Develop a detailed mathematical formulation of a survey selection function, where the goal is to keep this as general as possible even if in this project the focus is on the Gaia survey. The formulation should account for the layering of user imposed sample selections on top of the survey selection function and allow for a description of the selection function of combinations of surveys.
@@ -56,12 +36,12 @@ their scientific analyses and thus maximize the outcome thereof. In detail the o
     \item Apply the selection function tools to example science cases. This will serve to demonstrate the benefits of carefully accounting for the selection function and at the same time provide worked examples to the community of prospective users of these tools.
 \end{enumerate}
 
-The long term curation of the results will be ensured through the availability of the auxiliary data through the ESA Gaia archive and by source code for the uers tools being embedded in or affilated to the Astropy project.
+The long term curation of the results will be ensured through the availability of the auxiliary data through the ESA Gaia archive and by source code for the uers tools being embedded in or affiliated to the Astropy project.
 
 \subsection{Context}
 \label{sec:context}
 
-ESA's Gaia mission \cite{2016A&A...595A...1G} represents a European breakthrough in astrophysics, a cornerstone mission which was launched in 2013 aimed at producing the most accurate 3D map of the Milky Way to date. The resulting stereoscopic census of our Galaxy represents a giant leap in astrometric accuracy (reaching the 10--20 micro-arcsecond regime, which is equivalent to knowing the 3D positions of stars to 10 per cent precision over distances as large as $20\,000$ to $30\,000$ lightyears) complemented by the only full sky homogeneous photometric survey with an angular resolution comparable to that of the Hubble Space Telescope, as well as the largest spectroscopic survey ever undertaken. 
+ESA's Gaia mission \cite{2016A&A...595A...1G} represents a European breakthrough in astrophysics, a cornerstone mission which was launched in 2013 aimed at producing the most accurate 3D map of the Milky Way to date. The resulting stereoscopic census of our Galaxy represents a giant leap in astrometric accuracy (reaching the 10--20 micro-arcsecond regime, which is equivalent to knowing the 3D positions of stars to 10 per cent precision over distances as large as $20\,000$ to $30\,000$ light-years) complemented by the only full sky homogeneous photometric survey with an angular resolution comparable to that of the Hubble Space Telescope, as well as the largest spectroscopic survey ever undertaken. 
 
 The primary scientific aim of the mission is to map the structure of our Galaxy and unravel its formation history and subsequent evolution. Current cosmological models envisage the formation of large galaxies through the merging of smaller structures. Deciphering the assembly history of our Galaxy requires a detailed mapping of the structure, dynamics, chemical composition, and age distribution of its stellar populations. Ideally one would like to `tag' individual stars to each of the progenitor building blocks of the Galaxy \cite{2002ARA&A..40..487F}. The Gaia mission is designed to provide the required fundamental data in the form of distances (through parallaxes), space velocities (through proper motions and radial velocities) and astrophysical characterisation (through multi-colour photometry) for massive numbers of stars throughout most of the Galaxy. It should be stressed however that Gaia is not simply a `Milky Way mission' but is truly a multi-faceted {\em astrophysics mission} which will provide exciting scientific results covering many topics including: fundamental stellar physics across the Hertzsprung-Russell diagram, the characterisation of tens of millions of binary stars, unique samples of variable stars of nearly all types (including key cosmological distance calibrators), detection and orbital classification of thousands of exo-planetary systems, a comprehensive survey of objects ranging from huge numbers of minor bodies in our Solar System, through galaxies in the nearby Universe, to over a million distant quasars. Gaia will also provide a number of stringent tests of general relativity. Last but not least, a massive survey such as Gaia will uncover many surprises that the Universe still holds in store for us.
 
@@ -124,14 +104,6 @@ widely accepted results have already come from analysing the distribution of Gai
 \end{equation*}
 If one then models only the restricted data $\lambda_{cut}(y\given\theta)$, Eq.\ref{eqn:selfunc_definition} becomes simple, as one the can sensibly adopt
 %as the right hand side can be supposedly approximated as 
-%\By{ARC}{I'm not sure it can be \emph{approximated as}, but rather `\emph{is assumed as}' since this is the same as $S_C(y_s) \approx 1$, right?}
-%\begin{equation*}
-%    S_C(y_s)\times S_{cut}(y) \approx  \begin{cases} 1 &\mbox{if\ \ } y \mbox{\ \ within cuts} \\ 
-%0 &\mbox{\ \ else.} \end{cases}
-%\end{equation*}
-%\By{MF}{I feel this above sentence is not very clear. What we are trying to say is that $S_C \times S_{cut} \approx 1$ and thus $\lambda_C \approx \lambda_0$ over the parameter space of interests. 
-%If one then models only the restricted data $\lambda_{cut}(y\given\theta)$, Eq.\ref{eqn:selfunc_definition} becomes simpler,
-%as one can assume that 
 \begin{equation*}
     \lambda_{cut}(y\given\theta) \approx S_C(y) \times S_{cut}(y)\, \lambda_0(y\given \theta) \approx  \begin{cases}  \lambda_0(y\given \theta) &\mbox{if\ \ } y \mbox{\ \ within cuts} \\ 
 0 &\mbox{\ \ else.} \end{cases}
@@ -175,7 +147,7 @@ To illustrate the kinds of selection effects that can occur in the Gaia data we 
     \centering
     \includegraphics[width=0.5\linewidth]{img/BulgeRegionGlt13.png}\hfil
     \includegraphics[width=0.5\linewidth]{img/BulgeRegionG20p65to20p70.png}
-    \caption{\textbf{Left} The distribution on the sky of sources brighter than $G=13$ (300 thousand sources) in the direction of the Milky Way bulge region. No obvious selection effects are apparent, the darker regions being due to clouds of dust blocking the light from the stars behind them. \textbf{Right} The same for sources with $20.65<G<20.70$ (4 million sources). Note the strong striping pattern which again reflects the combination of the Gaia sky scanning strategy and the filtering on data quality during the data processing.}
+    \caption{\textbf{Left} The distribution on the sky of sources brighter than $G=13$ (300 thousand sources) in the direction of the Milky Way bulge region. No obvious selection effects are apparent, the darker regions being due to clouds of dust blocking the light from the stars behind them. The white pixels are empty of sources due to severe dust effects.\textbf{Right} The same for sources with $20.65<G<20.70$ (4 million sources). Note the strong striping pattern which again reflects the combination of the Gaia sky scanning strategy and the filtering on data quality during the data processing. The white areas are due to a combination of dust effects and the drop in catalogue completeness at these faint magnitudes.}
     \label{fig:bulge}
 \end{figure}
 
@@ -185,7 +157,7 @@ such a density map is not merely the combination of the (catalogued) stars distr
 
 \noindent\textbf{B) Milky Way Dynamics and Distribution of (Dark) Matter}
 
-Inferring the (dark) mass distribution, or the gravitational potential, in and around our Galaxy from modelling the 6D phase-space distribution of stars is another seminal and central science case for the overall Gaia mission. There are many sophisticated approaches to 'dynamical modelling', but the indispensible role of a well-understood selection function of the stars that serve as kinematic tracers can be illustrated with the arguably simplest form of dynamical modelling, the Jeans Equation. Consider the disk dynamics in the vertical direction (the `Oort limit'):
+Inferring the (dark) mass distribution, or the gravitational potential, in and around our Galaxy from modelling the 6D phase-space distribution of stars is another seminal and central science case for the overall Gaia mission. There are many sophisticated approaches to 'dynamical modelling', but the indispensable role of a well-understood selection function of the stars that serve as kinematic tracers can be illustrated with the arguably simplest form of dynamical modelling, the Jeans Equation. Consider the disk dynamics in the vertical direction (the `Oort limit'):
 \begin{equation}
     \frac{\partial[\rho_*(R,z) \overline{v_z^2}(R,z)]}{\partial z}~+~\frac{1}{R}
     \frac{\partial[R \rho_* \overline{v_z v_R}]}{\partial R} + \rho_*\frac{\Phi(R,z)}{\partial z}=0 \mathrm{\ or\ \ } \frac{\partial[\rho_*(R,z) \overline{v_z^2(R,z)}]}{\partial z} + \rho_*\frac{\Phi(R,z)}{\partial z}=0,
@@ -195,8 +167,8 @@ where the second form is for separable motions. Dynamics involves not only motio
 on the spatial gradient of the selection function. \textbf{Therefore, Gaia data have taught us very little to date about dark matter near the Sun, whether the dark matter in the Milky Way has a cusp or a core}.
 
 This is also why all initial high-profile analyses of the motions in Gaia data 
-\citep{Katz2018a,Antoja2018a} were only \emph{kinematic} not \emph{dymamical} analysis. Traditionally, 'rotation curve' have been the regime where the spatial tracer distribution matters least. But even the best Gaia rotation curve analyses \citep[e.g.][]{Eilers2019a} are limited in measuring exactly where dark matter starts to dominate the mass distribution in our Galaxy by the `asymmetric drift' 
-the analogous radial terms to Eq.\ref{eqn:Jeans} including spatial tracer derivatives. Here, it is not only Gaia's selection function that needs to be know, but also that of the APOGEE survey; this present proposal also addresses the determination of survey-combined selection functions.
+\citep{Katz2018a,Antoja2018a} were only \emph{kinematic} not \emph{dynamical} analysis. Traditionally, 'rotation curve' have been the regime where the spatial tracer distribution matters least. But even the best Gaia rotation curve analyses \citep[e.g.][]{Eilers2019a} are limited in measuring exactly where dark matter starts to dominate the mass distribution in our Galaxy by the `asymmetric drift' 
+the analogous radial terms to Eq.\,\ref{eqn:Jeans} including spatial tracer derivatives. Here, it is not only Gaia's selection function that needs to be know, but also that of the APOGEE survey; this present proposal also addresses the determination of survey-combined selection functions.
 
 \noindent\textbf{Stellar Streams and 'empty' dark matter halos with Gaia:\ }
 
@@ -210,7 +182,7 @@ Among the many aspects of stellar physics where Gaia can be transformative, bina
 
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=0.5\linewidth]{img/BinarySelection_ElBadry.png}
+    \includegraphics[width=0.7\linewidth]{img/BinarySelection_ElBadry.png}
     \caption{Illustration of the inherent complexities of the Gaia selection function (`contrast limit', right panel), when considering close pairs of sources, from \citet{ElBadry2019}, who discovered a population of twin-binaries (near-identical stars) to $\gtrsim 1000$~AU of unknown formation mechanism.
     Unsurprisingly, the minimal angular separation at which stars of a certain magnitude difference $\delta$G have both good proper motions (to be recognized as comoving) depends strongly on $\delta$G}
     \label{fig:binaries}
@@ -222,7 +194,7 @@ which come from re-integrated slitless spectra, have a very complex dependence o
 
 \textbf{Without rigorous knowledge of $S_C(y_s)$ in the 'crowded source' regime, binary science, cluster science and the central Galaxy will remain inaccessible to Gaia studies that do justice to the data's information content.}
 
-There are added levels of complexity of determining and characterizing the selection function. Often, is of interest -- or at least tempting -- to make an extensive set of of quality flags part of a sample selection. If such cuts only eliminate a tiny subset, for reasons unrelated to the object's physical properties, this is without consequence. But if far-reaching cuts are made in quality flags such as RUWE or on data uncertainties (velocity errors, fractional parallax errors) a whole new level of complexities arises. While in general it may be advisable to base sample selection on observables, not their un certainties, the issue cannot be ignored. 
+There are added levels of complexity of determining and characterizing the selection function. Often, is of interest -- or at least tempting -- to make an extensive set of of quality flags part of a sample selection. If such cuts only eliminate a tiny subset, for reasons unrelated to the object's physical properties, this is without consequence. But if far-reaching cuts are made in quality flags such as RUWE (renormalized unit weight error) or on data uncertainties (velocity errors, fractional parallax errors) a whole new level of complexities arises. While in general it may be advisable to base sample selection on observables, not their uncertainties, the issue cannot be ignored. 
 This is an area, where it may not be possible to devise (in the context of this proposal) a user-ready recipe for $S_C(y_s)$.
 
 \textbf{Taken together, far better knowledge of the Gaia catalog selection function $S_C(y_s)$ is needed to
