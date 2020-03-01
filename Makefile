@@ -5,6 +5,7 @@ $(target).pdf: *.tex refs.bib
 	bibtex $(target)
 	pdflatex $(target)
 	pdflatex $(target)
+	pdflatex $(target)
 
 clean:
 	rm *.aux *.bbl *.blg *.idx *.log *.out *.pdf *.toc
