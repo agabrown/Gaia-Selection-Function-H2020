@@ -4,19 +4,19 @@
 \section{Work plan --- Work packages, deliverables}
 \label{sec:work-plan}
 
-\subsection{Overall structure}
-\label{sec:wpstructure}
-
-The overall approach to the work plan is to have the research and development of the selection function progress in parallel with the implementation thereof. We made this choice because of the complexities of the selection function and its realization in the form of tools and auxiliary data, and because of the relatively short duration of the project. The work flow we foresee for {\acro} is shown in \figref{fig:workflow}. It is an iterative workflow in which the findings in each of work packages \ref{wp:selfungaia}--\ref{wp:scienceappl} will inform the others. For example the research on the selection function will lead to requirements on the implementation, while at the same time the conversion of research ideas into practical tools will lead to the questioning and revision of those same ideas.
-
-At several points during the project the results will be combined into prototype implementations of the selection function tools. These will be tested both internally to the project and through the public availability of two prototype implementations. Specifically, we plan to organize two community workshops just after the public release of the prototypes to train members from the astronomical community in the use of the tools and to collect user feedback. The results from these tests will feed into the next round of research, development, and implementation. The scientific nature of much of the work conducted in {\acro} will very much benefit from an iterative approach. Close coordination between the work packages will of course be essential and this is foreseen in the management structure.
-
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{workflow.pdf}
     \caption{Iterative workflow for {\acro}.}
     \label{fig:workflow}
 \end{figure}
+
+\subsection{Overall structure}
+\label{sec:wpstructure}
+
+The overall approach to the work plan is to have the research and development of the selection function progress in parallel with the implementation thereof. We made this choice because of the complexities of the selection function and its realization in the form of tools and auxiliary data, and because of the relatively short duration of the project. The work flow we foresee for {\acro} is shown in \figref{fig:workflow}. It is an iterative workflow in which the findings in each of work packages \ref{wp:selfungaia}--\ref{wp:scienceappl} will inform the others. For example the research on the selection function will lead to requirements on the implementation, while at the same time the conversion of research ideas into practical tools will lead to the questioning and revision of those same ideas.
+
+At several points during the project the results will be combined into prototype implementations of the selection function tools. These will be tested both internally to the project and through the public availability of two prototype implementations. Specifically, we plan to organize two community workshops just after the public release of the prototypes to train members from the astronomical community in the use of the tools and to collect user feedback. The results from these tests will feed into the next round of research, development, and implementation. The scientific nature of much of the work conducted in {\acro} will very much benefit from an iterative approach. Close coordination between the work packages will of course be essential and this is foreseen in the management structure.
 
 \begin{figure}[ht!]
     \centering
@@ -31,9 +31,21 @@ At several points during the project the results will be combined into prototype
 The overall work plan is structured as follows:
 \begin{itemize}
     \item The first 6 months will be used to recruit the researchers to be funded from this proposal and to carry out the tasks in work package \ref{wp:selfundefinition}. Having a mathematical framework for the selection function in place early on in the project is important for guiding the research and the implementation phases.
-    \item During the next three years of the project the efforts in work packages \ref{wp:selfungaia} to \ref{wp:scienceappl} will happen mostly in parallel for the reasons outlined above. The iterative approach outline in \secref{sec:wpstructure} will be used in this phase.
-   \item The selection function implementation prototypes to be developed in each phase will increase in their level of detail and complexity. We explicitly foresee two public prototypes (see \figref{fig:gantt} and \secref{wp:selfunimplementation}), which will be presented and tested at two community workshops. Further internal prototypes are also foreseen. Initially we may chose to implement a prototype selection function that depends only on sky position and apparent magnitudes (\figref{fig:gsf_ideal}), without any consideration for observation interruptions on the spacecraft, or on-board or ground processing effects. It would then be natural to include spacecraft outages, as these events are well-documented. Depending on the level of complexity envisaged, Prototype 2 may include on board processing effects like magnitude estimates (given the input source catalogue) and telemetry effects. Prototype 2 could also include pipeline data processing interventions that occur on the ground, or how astrophysical environments would affect the observable properties (e.g., binarity, variability). The scope of each prototype will be iteratively guided by user testing, feedback, and the executive board.
+    \item During the next three years of the project the efforts in work packages \ref{wp:selfungaia} to \ref{wp:scienceappl} will happen in parallel as illustrated in \figref{fig:workflow}. The iterative approach outline in \secref{sec:wpstructure} will be used in this phase.
+    \item The selection function implementation prototypes to be developed in each phase will increase in their level of detail and complexity. We explicitly foresee two public prototypes (see \figref{fig:gantt} and \secref{wp:selfunimplementation}), which will be presented and tested at two community workshops. Further internal prototypes are also foreseen. Initially we may chose to implement a prototype selection function that depends only on sky position and apparent magnitudes (\figref{fig:gsf_ideal}), without any consideration for observation interruptions on the spacecraft, or on-board or ground processing effects. It would then be natural to include spacecraft outages, as these events are well-documented. Depending on the level of complexity envisaged, Prototype 2 may include on board processing effects like magnitude estimates (given the input source catalogue) and telemetry effects. Prototype 2 could also include pipeline data processing interventions that occur on the ground, or how astrophysical environments would affect the observable properties (e.g., binarity, variability). The scope of each prototype will be iteratively guided by user testing, feedback, and the executive board.
  \end{itemize}
+
+\subsection{Dependencies}
+\label{sec:dependencies}
+
+\figrefcap{fig:dependencies} shows the dependencies between the various work packages in \acro. The arrows indicate a ‘depends on’ relationship. For example WP\ref{wp:selfuncombine} depends on WP\ref{wp:selfungaia} for the details of the Gaia selection function in order to produce combined selection functions. The reverse dependency shows that studying combined selection function will also lead to constraints on the Gaia selection function. WP\ref{wp:scienceappl} provides the science applications which depend on WPs~\ref{wp:selfungaia} and \ref{wp:selfuncombine} for the selection functions to apply and on WP\ref{wp:selfunimplementation} for the tools to do so. In return WP\ref{wp:scienceappl} provides crucial validation of the results from WPs~\ref{wp:selfungaia} and \ref{wp:selfuncombine} and extensive testing of the implementation provided by WP\ref{wp:selfunimplementation}. WP\ref{wp:selfundefinition} provides the framework for the other WPs as indicated by the grey rectangle.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{dependencies.pdf}
+    \caption{The dependencies between the work packages in \acro.}
+    \label{fig:dependencies}
+\end{figure}
 
 \makewplist
 
@@ -52,18 +64,6 @@ The overall work plan is structured as follows:
 \input{wp6-scienceappl}
 
 \makedeliverablelist
-
-\subsection{Dependencies}
-\label{sec:dependencies}
-
-\figrefcap{fig:dependencies} shows the dependencies between the various work packages in \acro. The arrows indicate a ‘depends on’ relationship. For example WP\ref{wp:selfuncombine} depends on WP\ref{wp:selfungaia} for the details of the Gaia selection function in order to produce combined selection functions. The reverse dependency shows that studying combined selection function will also lead to constraints on the Gaia selection function. WP\ref{wp:scienceappl} provides the science applications which depend on WPs~\ref{wp:selfungaia} and \ref{wp:selfuncombine} for the selection functions to apply and on WP\ref{wp:selfunimplementation} for the tools to do so. In return WP\ref{wp:scienceappl} provides crucial validation of the results from WPs~\ref{wp:selfungaia} and \ref{wp:selfuncombine} and extensive testing of the implementation provided by WP\ref{wp:selfunimplementation}. WP\ref{wp:selfundefinition} provides the framework for the other WPs as indicated by the grey rectangle.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\linewidth]{dependencies.pdf}
-    \caption{The dependencies between the work packages in \acro.}
-    \label{fig:dependencies}
-\end{figure}
 
 \section{Management structure, milestones and procedures}
 \label{sec:management}
@@ -102,7 +102,7 @@ We list here the procedures that will apply to the management of {\acro}:
 \subsection{Consortium agreement}
 \label{sec:cons_agreement}
 
-The internal workings of {\acro} and the roles and responsibilities of the partners will be formalized through a consortium agreement which will be drawn up and agreed at the start of the programme. It will define the decision taking procedures in {\acro} and the mechanisms for conflict resolution, which will be channelled through the Executive Board, as well as the management of intellectual property rights as described in \secref{sec:openipr}.
+The internal workings of {\acro} and the roles and responsibilities of the partners will be formalized through a consortium agreement which will be drawn up and agreed at the start of the programme. It will define the decision taking procedures in {\acro} and the mechanisms for conflict resolution, which will be channelled through the Executive Board, as well as the management of intellectual property rights as described in \secref{sec:dissemination-exploitation}.
 
 \subsection{Recruitment strategy}
 \label{sec:recruit}
