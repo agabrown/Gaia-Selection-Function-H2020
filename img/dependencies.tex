@@ -66,9 +66,12 @@ sep=3pt, text badly centered, text width=13mm, fill=mptab10cyan]
   \node[wp6, above right of=wp4] (wp6) {WP6\\ Science applications};
   \node[wp5] (wp5) at ($0.5*(wp3)+0.5*(wp6)$) {WP5\\ Combined selection functions};
   \begin{pgfonlayer}{background}
+      \draw[draw=black, thick, rounded corners=5pt] ($(wp3)+(-1.6,2.2)$) rectangle
+      ($(wp6)+(1.6,-5.3)$);
       \draw[draw=black!50!white, thick, rounded corners=5pt, fill=black!10!white] ($(wp3)+(-1.5,-1.2)$) rectangle
     ($(wp6)+(1.5,2)$);
     \node[yshift=0.0cm, text width=2cm, anchor=south] at ($(wp6.north)+(1.0,0.2)$) {WP2\\ Mathematical framework};
+    \node[text width=2cm, anchor=south] at ($(wp6.south)+(0.2,-4.5)$) {WP1 Management};
   \end{pgfonlayer}
  
   \draw[depends] (wp3.270) -- node[below,sloped]{implementation} (wp4.170);
