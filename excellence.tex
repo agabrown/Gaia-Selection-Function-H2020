@@ -102,7 +102,7 @@ The third regime is that one can analyze the distribution of quantities in $p(y_
 \subsubsection{Highlight Gaia Science that cannot be done without a Good Selection-Function}
 \label{sec:notpossible}
 
-We now proceed to highlight a few science cases central to Gaia's scientific success that absolutely require a well-determined selection function to be feasible\footnote{By `feasible' in this context we mean: able to address a science question with a quantitative understanding of the dominant source of systematic uncertainty; and not falling short by more than an order-of-magnitude of the full pertinent information content of the Gaia catalogue.}. To illustrate the kinds of selection effects that can occur in the Gaia data we refer to figures \ref{fig:6dsample}--\ref{fig:bulge}. These figures serve also to reinforce the points made in the following text.
+We now proceed to highlight a few science cases central to Gaia's scientific success that absolutely require a well-determined selection function to be feasible\footnote{By `feasible' in this context we mean: able to address a science question with a quantitative understanding of the dominant source of systematic uncertainty; and not falling short by more than an order-of-magnitude of the full pertinent information content of the Gaia catalogue.}. To illustrate the kinds of selection effects that can occur in the Gaia data we refer to figures \ref{fig:6dsample}--\ref{fig:g12to15_2mass}. These figures serve also to reinforce the points made in the following text.
 \\
 
 \begin{figure}
@@ -132,6 +132,20 @@ We now proceed to highlight a few science cases central to Gaia's scientific suc
     \includegraphics[width=0.5\linewidth]{img/BulgeRegionG20p65to20p70.png}
     \caption{\textbf{Left} The distribution on the sky of sources brighter than $G=13$ (300 thousand sources) in the direction of the Milky Way bulge region. No obvious selection effects are apparent, the darker regions being due to clouds of dust blocking the light from the stars behind them. The white pixels are empty of sources due to severe dust effects. \textbf{Right} The same for sources with $20.65<G<20.70$ (4 million sources). Note the strong striping pattern which again reflects the combination of the Gaia sky scanning strategy and the filtering on data quality during the data processing. The white areas are due to a combination of dust effects and the drop in catalogue completeness at these faint magnitudes.}
     \label{fig:bulge}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{img/DR2_5P_12to15_CompMap.png}
+    \caption{The completeness of the Gaia DR2 sample of sources at $12<G\leq15$ for which parallax and proper motion are listed in the catalogue. The completeness is high and generally uniform over this magnitude range. Compare to \figref{fig:g12to15_2mass} which shows how the completeness is affected when combining this sample with the 2MASS catalogue.}
+    \label{fig:g12to15}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{img/DR2_5P_2MASS_CompMap_old.png}
+    \caption{The completeness of the sample of sources at $12<G\leq15$ for which parallax and proper motion are listed Gaia DR2 and infrared photometry is listed in 2MASS. Note how combining these two catalogues leads to a drop in the completeness along the Galactic plane. This is because many sources in 2MASS will be invisible to Gaia due to the effects of dust. In addition in regions away from the Galactic plane artefacts related to the 2MASS sky survey are seen. This figure is an illustration of the selection function complexities that can arise when combing data from multiple catalogues.}
+    \label{fig:g12to15_2mass}
 \end{figure}
 
 \noindent\textbf{A) 3D-Mapping of the Milky Way}
