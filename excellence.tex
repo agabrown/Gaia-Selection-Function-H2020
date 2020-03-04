@@ -173,7 +173,7 @@ This is also why all initial high-profile analyses of the motions in Gaia data \
 
 \noindent\textbf{C) Stellar Streams and `empty' dark matter halos with Gaia\ }
 
-Dynamical analyses, where it is sensible to model $p(\vec{v}\given\vec{x})$ rather than $p(\vec{v},\vec{x})$, depend less on detailed knowledge of the selection function, as $S_C(y)$ depends most strongly on $\vec{x}$, or on ($\alpha,\delta,D$), with $D$ the distance. A beautiful recent example of this is \citet{Erkal2019}, which used Gaia proper motions (and other information) along the known `Orphan stream' to constrain the mass of the Large Magellanic Cloud. However, one needs not look further than the current holy grail of stellar stream science: the diagnosis of the impact of purported `empty' (i.e. star-free) dark matter sub-halos in the Milky Way: a close passage by of such a dark matter halos would create a gap or caustic in the stream. In the analysis of \citet{Bonaca2019} that provides the currently best evidence that such empty halos actually exist --- a central and untested prediction of $\lambda$CDM cosmogony --- the detailed knowledge of the selection function is the limiting systematic. A powerful illustration of this effect is shown in Fig. \ref{fig:gd1}, a modified version of a plot from \citet{Ibata2020} who argued that the striped selection function of Gaia -- arising from the scanning law -- appears as gaps in the stellar density along the stream GD-1.
+Dynamical analyses, where it is sensible to model $p(\vec{v}\given\vec{x})$ rather than $p(\vec{v},\vec{x})$, depend less on detailed knowledge of the selection function, as $S_C(y)$ depends most strongly on $\vec{x}$, or on ($\alpha,\delta,D$), with $D$ the distance. A beautiful recent example of this is \citet{Erkal2019}, which used Gaia proper motions (and other information) along the known `Orphan stream' to constrain the mass of the Large Magellanic Cloud. However, one needs not look further than the current holy grail of stellar stream science: the diagnosis of the impact of purported `empty' (i.e. star-free) dark matter sub-halos in the Milky Way: a close passage by of such a dark matter halos would create a gap or caustic in the stream. In the analysis of \citet{Bonaca2019} that provides the currently best evidence that such empty halos actually exist --- a central and untested prediction of $\lambda$CDM cosmogony --- the detailed knowledge of the selection function is the limiting systematic. A powerful illustration of this effect is shown in Fig. \ref{fig:gd1}, a modified version of a plot from \citet{Ibata2020} who argued that the striped selection function of Gaia --- arising from the scanning law --- appears as gaps in the stellar density along the stream GD-1.
 \\
 
 \begin{figure}
@@ -271,7 +271,6 @@ In the subsequent sections we lay out how to provide this. We will focus on the 
 % TRILEGAL (Girardi et al., 2005),
 % GALAXIA (Sharma et al., 2011).
 
-
 \section{Relation to the work programme}
 \label{sec:relation-to-work-programme}
 \instructions{
@@ -288,8 +287,6 @@ This proposal is in response to the call `Space 2018--2020' and is specifically 
 %    \item The work proposed here will lead to data products that can be integrated into the ESA Gaia archive and to open source software tools which will be made available through code hosting websites. The combination of data and code will enable the users to include in their scientific analyses the Gaia selection function as well as selection functions for Gaia combined with other surveys.
 %    \item The participants in this proposal represent an international collaboration with in particular the involvement of partners from the USA and Australia, both countries which are active in space exploration and space science.
 %\end{itemize}
-
-\newpage
 
 \begin{longtable}{|>{\raggedright}p{0.27\linewidth}|>{\raggedright}p{0.27\linewidth}|>{\raggedright}p{0.27\linewidth}|>{\raggedright}p{0.1\linewidth}|}
 \hline
@@ -350,6 +347,8 @@ Our goals will be achieved through research and development (including applicati
     \item making the software tools and numerical data publicly available to enable scientists to incorporate the selection function in their analyses of Gaia and other survey data (TRL 8).
 \end{itemize}
 The {\acro} effort must be guided by developing in parallel a number of concrete and diverse science applications in order to ensure that the requirements on the selection function (level of detail, best practical implementation) are properly understood and incorporated in the data products and tools delivered through the efforts proposed here. \secrefcap{sec:methods} describes in detail how the above elements are implemented through the work packages listed in Section \ref{sec:work-plan}.
+
+Finally, we stress at this point that individual members of the astronomical community are already making progress toward constructing the Gaia selection function. We point in particular to the recent work by Boubert \& Everall \cite{Boubert2020a, Boubert2020b} which includes data products and tools for the user\footnote{\url{https://github.com/DouglasBoubert/selectionfunctions}}. However, these efforts, although extremely valuable, are somewhat ad-hoc and dependent on the voluntary work by individual astronomers who are naturally focused on solving the problems most pertinent to their own research. What is needed is a concerted effort to come to a generally applicable and usable Gaia selection function. Nevertheless the existing community efforts underline that {\acro} is timely and that the efforts we propose to embark on are indeed realistic.
 
 \subsubsection{Stakeholders}
 \label{sec:stakeholders}
