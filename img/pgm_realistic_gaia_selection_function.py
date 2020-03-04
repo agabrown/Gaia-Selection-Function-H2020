@@ -6,32 +6,32 @@ Anthony Brown Feb 2020
 
 from matplotlib import rc
 import matplotlib.pyplot as plt
-rc("font", family="serif", size=12)
+rc("font", family="serif", size=13)
 rc("text", usetex=False)
 
 import daft
 
 pgm = daft.PGM([12.75,7.5], origin=[-1, 2], node_unit=1.5, grid_unit=2.5)
 
-pgm.add_node(daft.Node("Gsource", "$G_\mathrm{source}$", 0, 8))
-pgm.add_node(daft.Node("detection", "detection and\nreal/spurious\ndiscrimination", 4, 7, aspect=3.5))
+pgm.add_node(daft.Node("Gsource", "$G_\mathrm{source}$", 0, 8, aspect=1.2))
+pgm.add_node(daft.Node("detection", "detection and\nreal/spurious\ndiscrimination", 4, 7, aspect=3.8))
 pgm.add_node(daft.Node("Gvpu", "$G_\mathrm{VPU}$", 2.5, 8))
 pgm.add_node(daft.Node("confirmation", "confirmation", 4, 6, aspect=2.25))
-pgm.add_node(daft.Node("afxpobs", "AF/XP\nobservations", 4, 5, aspect=2.25))
-pgm.add_node(daft.Node("rvsobs", "RVS \nobservations", 4, 4, aspect=2.25))
+pgm.add_node(daft.Node("afxpobs", "AF/XP\nobservations", 4, 5, aspect=2.5))
+pgm.add_node(daft.Node("rvsobs", "RVS \nobservations", 4, 4, aspect=2.5))
 pgm.add_node(daft.Node("GRVSsource", "$G_\mathrm{RVS,source}$", 0, 4, aspect=1.75))
 pgm.add_node(daft.Node("bpminrp", "$(G_\mathrm{BP}-G_\mathrm{RP})_\mathrm{source}$", 0, 3, aspect=2.75))
 pgm.add_node(daft.Node("GRVSvpu", "$G_\mathrm{RVS,VPU}$", 2.5, 4, aspect=1.5))
-pgm.add_node(daft.Node("sp", "Tel. Packets\non ground", 6.5, 4.5, aspect=2.25))
-pgm.add_node(daft.Node("realspurious", "Real/spurious\nclassification", 6.5, 5.5, aspect=2.5,
+pgm.add_node(daft.Node("sp", "Tel. Packets\non ground", 6.5, 4.5, aspect=2.5))
+pgm.add_node(daft.Node("realspurious", "Real/spurious\nclassification", 6.5, 5.5, aspect=2.8,
     plot_params={"ec":plt.cm.tab10.colors[1], "lw":2}))
-pgm.add_node(daft.Node("match", "Observation to\nsource matching", 6.5, 6.5, aspect=2.75,
+pgm.add_node(daft.Node("match", "Observation to\nsource matching", 6.5, 6.5, aspect=3.00,
     plot_params={"ec":plt.cm.tab10.colors[1], "lw":2}))
 pgm.add_node(daft.Node("sourcelist", "Source\nlist", 6.5, 7.5, aspect=1.5, plot_params={"ec":plt.cm.tab10.colors[1],
     "lw":2}))
-pgm.add_node(daft.Node("pipeline", "Processing\npipeline\nfilters", 8.5, 7.5, aspect=2.75,
+pgm.add_node(daft.Node("pipeline", "Processing\npipeline\nfilters", 8.5, 7.5, aspect=3.25,
     plot_params={"ec":plt.cm.tab10.colors[1], "lw":2}))
-pgm.add_node(daft.Node("validation", "Data\nquality\nfilters", 8.5, 6.5, aspect=2.0,
+pgm.add_node(daft.Node("validation", "Data\nquality\nfilters", 8.5, 6.5, aspect=2.5,
     plot_params={"ec":plt.cm.tab10.colors[1], "lw":2}))
 pgm.add_node(daft.Node("catalogue", "Gaia\ncatalogue", 8.5, 5.5, aspect=2.0, plot_params={"ec":plt.cm.tab10.colors[1],
     "lw":2}))
