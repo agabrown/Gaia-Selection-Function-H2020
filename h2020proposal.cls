@@ -819,7 +819,7 @@
     }%
     \immediate\write\delivlistfile{
       \noexpand\hline
-      \noexpand\multicolumn{6}{|r|}{Continued on next page}
+      \noexpand\multicolumn{7}{|r|}{Continued on next page}
       \noexpand\\
       \noexpand\hline
       \noexpand\endfoot
