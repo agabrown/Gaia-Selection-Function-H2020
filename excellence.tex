@@ -144,7 +144,7 @@ We now proceed to highlight a few science cases central to Gaia's scientific suc
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{img/DR2_5P_2MASS_CompMap_old.png}
-    \caption{The completeness of the sample of sources at $12<G\leq15$ for which parallax and proper motion are listed Gaia DR2 and infrared photometry is listed in 2MASS. Note how combining these two catalogues leads to a drop in the completeness along the Galactic plane. This is because many sources in 2MASS will be invisible to Gaia due to the effects of dust. In addition in regions away from the Galactic plane artefacts related to the 2MASS sky survey are seen. This figure is an illustration of the selection function complexities that can arise when combing data from multiple catalogues.}
+    \caption{The completeness of the sample of sources at $12<G\leq15$ for which parallax and proper motion are listed Gaia DR2 and high quality infrared photometry is listed in 2MASS. Note how combining these two catalogues leads to a drop in the completeness along the Galactic plane. This is due to crowding effects on the 2MASS catalogue. In addition in regions away from the Galactic plane artefacts related to the 2MASS sky survey are seen. This figure is an illustration of the selection function complexities that can arise when combing data from multiple catalogues.}
     \label{fig:g12to15_2mass}
 \end{figure}
 
@@ -152,11 +152,11 @@ We now proceed to highlight a few science cases central to Gaia's scientific suc
 
 Creating an unprecedented, large-scale 3D map of our Galaxy is arguably the central seminal goal of the Gaia mission, at the heart of setting the fundamental parallax precision science requirements. Yet, to date, no large-scale map of the stellar density (most of which is in the Galactic disk) has emerged. This is because  such a density map is not merely the combination of the (catalogued) stars distribution $\{y_s\}$, in position, magnitude and colour with distances, e.g. from parallaxes. Linking $\{y_s\}$ to spatial density of stars $\rho_*(X,Y,Z)$ requires modelling of the 3D dust distribution (there are large, coherent efforts underway to do this) and of $S_C(y_s)$. The selection function is so central here, as the quantities to be modelled, are exactly the quantities $y_s$ on which the selection depends!
 
-Unbiased distance estimates for all stars in samples of Gaia data (e.g. astrometry, RVS...) are also of vital interest to the community for studies of the dynamics of the Milky Way. Estimating the distances to stars in a Bayesian framework requires the Milky Way 3D map along with the selection function of the given sample. In it's simplest form, the distance PDF for any star in the sample will be given by
+Unbiased distance estimates for all stars in samples of Gaia data (e.g. astrometry, RVS...) are also of vital interest to the community for studies of the structure and dynamics of the Milky Way. Estimating the distances to stars in a Bayesian framework requires the Milky Way 3D map along with the selection function of the given sample. In it's simplest form, the distance PDF for any star in the sample will be given by
 \begin{equation}
-    \mathbb{P}(s | \varpi,l,b) = \frac{1}{Z} \mathbb{P}(\varpi | s, \sigma_\varpi) \mathbb{P}_\mathrm{map}(s, l, b) \mathbb{P}_\mathrm{obs}(S | s, l, b)
+    \mathbb{P}(s | \varpi) = \frac{1}{Z} \mathbb{P}(\varpi | s, \sigma_\varpi) \mathbb{P}_\mathrm{map}(s | l,b) \mathbb{P}_\mathrm{obs}(s | l,b)
 \end{equation}
-where $\mathbb{P}_\mathrm{map}(s | l, b)$ refers to the 3D Milky Way map, $\mathbb{P}_\mathrm{obs}(S | s, l, b)$ is the selection function and $Z$ is a normalisation constant.
+where $\mathbb{P}_\mathrm{map}(s | l, b)$ refers to the 3D Milky Way map, $\mathbb{P}_\mathrm{obs}(s | l, b)$ is the selection function and $Z$ is a normalisation constant.
 \\
 
 \noindent\textbf{B) Milky Way Dynamics and Distribution of (Dark) Matter}
